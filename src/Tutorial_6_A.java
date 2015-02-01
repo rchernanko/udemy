@@ -2,7 +2,7 @@ public class Tutorial_6_A {
 
 	public static void main(String[] args) {
 
-		double myDouble = 5.0;
+		double myDouble = 4.0;
 		// declaring and initialising my variable
 
 		if (myDouble != 5.0) {

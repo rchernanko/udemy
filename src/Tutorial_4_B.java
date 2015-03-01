@@ -25,7 +25,7 @@ public class Tutorial_4_B {
 		while (myWallet > 5) {
 
 			System.out
-					.println("I have some spending money in my wallet - wooo!!!");
+					.println("I have " + myWallet + " pounds in my wallet - wooo!!!");
 
 			myWallet = myWallet - 1;
 

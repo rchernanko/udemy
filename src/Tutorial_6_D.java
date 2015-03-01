@@ -3,7 +3,7 @@ public class Tutorial_6_D {
 
 		boolean myCondition;
 		myCondition = 8 < 6;
-		// 7 is less than 6 = true. If not, if 7 is not less than 6 = false
+		// 8 is less than 6 = true. If not, if 8 is not less than 6 = false
 
 		System.out.println(myCondition);
 

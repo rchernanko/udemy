@@ -16,6 +16,7 @@ public class Tutorial_5_A {
 		for (int pintPrice = 10; pintPrice > 3; pintPrice--) {
 			System.out.printf("The price of a pint is currently %d\n",
 					pintPrice);
+
 		}
 		
 		//Notice the printf in the above. This = (format, argument). Also the %d allows me to print the value in the variable pintPrice. The %d is specific to integer primitive values.

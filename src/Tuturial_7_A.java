@@ -6,7 +6,7 @@ public class Tuturial_7_A {
 
 		Scanner input = new Scanner(System.in);
 		// Scanner class will allow the user to input something, integers,
-		// strings etc. The standard way to 'input' is written above.
+		// strings etc. The standard way to 'input' = System.in.
 
 		System.out.println("Enter a number");
 		// Prompts the user to input something

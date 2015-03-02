@@ -4,8 +4,6 @@ public class Tutorial_7_C {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        // why is this 'input' - can i call it something else? Ask one of the
-        // others...
 
         System.out
                 .println("Hi. My name is Bob the computer. What is your first name?");
@@ -21,7 +19,7 @@ public class Tutorial_7_C {
 
         System.out.println("And what's your second name?");
 
-        String secondName = input.nextLine();
+        String secondName = input2.nextLine();
 
         System.out.println("Super stuff - your second name is " + secondName);
 

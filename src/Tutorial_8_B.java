@@ -6,7 +6,7 @@ public class Tutorial_8_B {
 
         Scanner football = new Scanner(System.in);
 
-        String favouriteClub = "Premier League";
+        String favouriteClub;
 
         do {
             System.out.println("Enter my favourite football club");

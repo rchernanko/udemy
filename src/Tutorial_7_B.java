@@ -7,7 +7,7 @@ public class Tutorial_7_B {
 
 		System.out.println("Enter some text ");
 
-		String value = input.next();
+		String value = input.nextLine();
 
 		System.out.println("You entered the following text: " + value);
 

@@ -6,7 +6,7 @@ public class Tutorial_8_A {
 
         Scanner richard = new Scanner(System.in);
 
-        int number = 0;
+        int number;
 
         do {
             System.out.println("Please enter a number: ");

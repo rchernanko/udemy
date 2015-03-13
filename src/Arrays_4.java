@@ -9,5 +9,4 @@ public class Arrays_4 {
         }
     }
 }
-//To do - How does the memory work for primitive type references, in this case prices?
 //Refer to my notes in the QA course, there is some good information there.

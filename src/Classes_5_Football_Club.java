@@ -7,7 +7,19 @@ public class Classes_5_Football_Club {
 
     public void obtainFootballClubDetails(){
 
-        System.out.println(name + " play their football at " + stadiumName + ". The capacity of the stadium is " + stadiumCapacity + ", and the current manager is " + currentManager);
+        System.out.println(name + " play their football at " + stadiumName + ". The capacity of the stadium is " + stadiumCapacity);
 
+    }
+
+    public void obtainFootballClubManagerDetails(){
+
+        System.out.println(name + "'s manager is " + currentManager);
+    }
+
+    int calculateDesiredStadiumCapacity(){
+
+        int perfectAmount = stadiumCapacity * 2;
+
+        return perfectAmount;
     }
 }

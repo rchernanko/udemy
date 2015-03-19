@@ -11,7 +11,6 @@ public class DoWhileLoop_3 {
         do {
             System.out.println("Can you guess what my name is...?");
             myName = name.nextLine();
-            System.out.println("Incorrect guess, please try again!");
         }
         while (!myName.equals("richard"));
 

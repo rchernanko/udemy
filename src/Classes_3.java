@@ -10,4 +10,6 @@ public class Classes_3 {
         }
     }
 
+    //Of course, I don't need the for loop here, I could just have the sout line. Just done it as an example.
+
 }

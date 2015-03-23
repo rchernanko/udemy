@@ -8,7 +8,7 @@ public class Static_Variables_And_Methods_1 {
     public static final int PINT_SIZE = 565;
     //Final keyword means the value in the variable PINT_SIZE is constant. I cannot assign something else to PINT_SIZE
     //E.g. I couldn't do PINT_SIZE = 3;
-    //Because this is a static class variable, I can only access it by "class + variable" (see below)
+    //And because this is a static class variable, I can only access it by "classname.variablename" (see below)
 
     public static int count = 0;
     //Good use of static variables is to count how many object instances you have! (see below in richard class)
@@ -29,11 +29,11 @@ public class Static_Variables_And_Methods_1 {
     public static void showInfo(){
         System.out.println(age);
     }
-    //Static method above. Can only be accessed via the class, not by object instances
+    //Static method above. Can only be accessed via the class, not by object instances (classname.methodname)
     //Static methods can access static class variables (in this instance 'age'), but cannot access non-static variables (e.g. name)
     //Won't work in showInfo method : System.out.println(name);
     //BUT non-static methods can access static class variables.
-    //Always remember that when an object instance is created, it already knows about the class (static) variables and methods. See below as an example:
+    //Always remember that when an object instance is created, it already knows about the class (static) variables and methods. See below as an example.
 
     public void nonStaticMethodCanAccessStaticVariables(){
         System.out.println(age);

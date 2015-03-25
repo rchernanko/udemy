@@ -72,9 +72,20 @@ public class String_Builder_Formatting_2 {
         //But I can define how many decimal points I want my floating point value to be (when it is printed), see below.
         //I need to put a e.g. ".2" between the % and the f
 
-        System.out.printf("This is another floating point value : %.2f", 5.63958403242);
+        System.out.printf("This is another floating point value : %.2f\n", 5.63958403242);
         //The above will round up to 2 decimal places
 
-        //got up to 17.10
+        //And you can also define the width (of characters) of a %f value by putting a number between the % and the f (but before the .2)
+        //A few examples:
+
+        System.out.printf("This is a floating point value with some width defined : %10.3f\n", 345.305847);
+        //above right aligns
+        System.out.printf("This is a floating point value with some width defined : %-10.3f\n", 345.305847);
+        //above left aligns
+
+        double level = 545.493745;
+        String type = "this type";
+        System.out.printf("This is a floating point value : %10.3f and a string value : %20s\n", level, type);
+        System.out.printf("This is a floating point value : %-10.3f and a string value : %-20s\n", level, type);
     }
 }

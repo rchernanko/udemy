@@ -33,7 +33,4 @@ public class String_Builder_1 {
         System.out.println(sentence3.toString());
 
     }
-
-    //Got up to 7 mins
-
 }

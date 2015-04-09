@@ -14,6 +14,10 @@ public class ToStringMethodExample_1 {
         return rollno+" "+name+" "+city;
     }
 
+    //another way to do the above, which is more efficient, is as below:
+
+
+
     public static void main(String args[]){
             ToStringMethodExample_1 s1=new ToStringMethodExample_1(101,"Raj","lucknow");
             ToStringMethodExample_1 s2=new ToStringMethodExample_1(102,"Vijay","ghaziabad");

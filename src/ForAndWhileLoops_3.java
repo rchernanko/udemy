@@ -7,6 +7,9 @@ public class ForAndWhileLoops_3 {
 			myDouble = myDouble + 0.5;
 
 			System.out.println("The price of my beer is : " + myDouble);
+
+			//When executed, the above 2 lines will print different values in the sout, depending on which line comes fist.
+			//So if i move sout to above the myDouble, I would receive different printed values
 		}
 
 		int myAge = 13;

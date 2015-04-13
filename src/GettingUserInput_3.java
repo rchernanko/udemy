@@ -12,8 +12,7 @@ public class GettingUserInput_3 {
         // how would you do this with a char type (instead of string?) - ask one
         // of the others
 
-        System.out.println("Great. So your first name is " + firstName);
-        System.out.println();
+        System.out.println("Great. So your first name is " + firstName + "\n");
 
         Scanner input2 = new Scanner(System.in);
 

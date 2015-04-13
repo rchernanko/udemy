@@ -13,7 +13,6 @@ public class DoWhileLoop_2 {
         do {
             System.out.println("Enter my favourite football club");
             favouriteClub = football.nextLine();
-            System.out.println("This is not my favourite football club");
         }
 
             while (!favouriteClub.equals("Spurs"));

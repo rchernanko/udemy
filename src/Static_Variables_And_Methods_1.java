@@ -42,7 +42,7 @@ public class Static_Variables_And_Methods_1 {
 
 }
 
-class richard{
+class RichardStatic{
 
     public static void main(String[] args) {
 

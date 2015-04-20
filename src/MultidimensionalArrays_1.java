@@ -4,14 +4,17 @@ public class MultidimensionalArrays_1 {
 
         int[][] grid = {
                 {3, 5, 2322},
-                {2131, 13432, 2344},
-                {2134, 2, 89}
+                {2131, 13432, 2344, 464},
+                {2134, 2, 89, 3957, 32},
+                {232, 3, 2321, 10}
         };
 
         System.out.println(grid[2][1]);
         System.out.println(grid[0][1]);
 
-        String[][] names = new String[2][2];
+        String[][] names = new String[2][4];
+        //think of the first value as the number of rows (or many arrays there are)
+        //think of the second value as the number of columns (or how long the arrays are)
 
         //From QA notes, the syntax of a multidimensional 2D array is : array_identifier = new type [number_of_arrays] [length];
 
@@ -22,9 +25,12 @@ public class MultidimensionalArrays_1 {
 
         System.out.println(names[0][1]);
 
-        for(int row = 0; row<names.length; row++){
-            for(int col = 0; col<names[row].length; col++){
-                System.out.print(names[row][col] + "\t");
+        System.out.println("The value is names.length is " + names.length);
+        //names.length refers to how many rows / how many arrays there are in the multidimensional array (i.e. the first value, 2).
+
+        for(int numberOfArrays = 0; numberOfArrays<names.length; numberOfArrays++){
+            for(int numberOfColumns = 0; numberOfColumns<names[numberOfArrays].length; numberOfColumns++){
+                System.out.print(names[numberOfArrays][numberOfColumns] + "\t");
             }
 
             System.out.println();

@@ -1,5 +1,20 @@
 package publicprotectedprivate.world;
 
+/*
+
+TO SUMMARISE
+
+private - can access only within the class
+public - can access from anywhere
+protected - can access within the same class, within subclasses, and within the same package
+no access modifier - can access within the same class, and within the same package
+
+You cannot declare classes as private or protected
+You can however declare a class without an access modifier, e.g. class Richard. But the class would only be visible within the file
+You can only have one public class per file name and it must match the name of the 'file' (e.g. Help.java)
+
+*/
+
 public class Plant {
 
     //Below is bad practice. Why? See notes below...
@@ -15,6 +30,8 @@ public class Plant {
         type = "Plant";
 
         size = "Large";
+
+        height = 6;
 
         //I can access the public variable 'name' absolutely anywhere in this class (Plant class).
         //In fact, I can access public variables absolutely anywhere in my project ('name' can be accessed in any other class).
@@ -56,6 +73,18 @@ public class Plant {
 
 
     //I wonder if interfaces work in the same way? Is an interface classed as a 'child' class?
+
+    //Another type of modifier is no modifier!
+
+    int height;
+
+    //height doens't have a public, private or protected modifier.
+    //I can access 'height' in a few different ways
+    //1) Within the class in which it is declared, e.g. Plant
+    //2) Within a class that is in the same package as the class in which the variable was declared, e.g. Oak
+
+    //Even if a class in another package extends Plant, they will not be able to access a variable with no access modifier e.g. height
+    //Variables with no access modifiers are only visible within the package in which they are declared (in the class)
 
 
 

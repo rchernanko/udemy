@@ -14,5 +14,9 @@ public class Oak extends Plant {
         //So what's going on above? Well, size is a 'protected' variable from the Plant class.
         //And because Oak extends the Plant class (is a subclass of Plant), I can access the protected variables from Plant in here.
 
+        this.height = 4;
+
+        //Above - 'height' is a variable with no modifier in the Plant class.
+        //I can access 'height' here because Oak is in the same package as Plant (the class in which height was declared)
     }
 }

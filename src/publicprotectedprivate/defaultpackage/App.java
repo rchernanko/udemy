@@ -22,5 +22,9 @@ public class App {
         //The below line of code won't work because the variable 'type' is a private variable within the 'Plant' class
         //And remember - private variables can only be accessed within the class in which they are declared.
         //System.out.println(plant.type); THIS WON'T WORK
+
+        //The below line of code won't work because the variable 'height' has no access modifier and is declared in the Plant class
+        //The Plant class is in another package. Variables with no modifiers cannot be accessed by classes in another package
+        //System.out.println(plant.height); THIS WON'T WORK
     }
 }

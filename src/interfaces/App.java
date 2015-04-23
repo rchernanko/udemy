@@ -16,7 +16,7 @@ public class App {
 
         //I can do the above because Machine implements the Info interface
         //but my main question is why would you want (where is it useful) to define the variable as type Interface? I don't quite understand...why isn't info1 variable of type Machine?
-        //How is the memory management working here also? One to talk through with Jay.
+        //How is the memory management working here also? One to talk through.
 
         info1.showInfo();
 

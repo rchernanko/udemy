@@ -64,7 +64,7 @@ public class Casting_1 {
         //And you can also convert from a double to an int...
 
         double doubleValue1 = 3456.45;
-        int intValue1 = 243;
+        int intValue1;
 
         intValue1 = (int) doubleValue1;
         System.out.println("The value in the variable intValue1 is " + intValue1);

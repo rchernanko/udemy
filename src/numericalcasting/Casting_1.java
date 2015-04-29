@@ -24,7 +24,8 @@ public class Casting_1 {
         System.out.println(Double.MIN_VALUE);
         System.out.println(Double.MAX_VALUE);
 
-        //Not sure how to read / understand the minimum and maximum values for Float and Double - find out more
+        //Not sure how to read / understand the minimum and maximum values for Float and Double - spoke with Marc
+        //Don't worry too much about this now - worry about it when you need to (and use Stack Overflow!)
 
         //And now for the actual tutorial
 

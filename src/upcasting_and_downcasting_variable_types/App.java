@@ -109,19 +109,31 @@ public class App{
         //One other thing to know - downcasting is quite risky because it won't show you certain errors until runtime (which can sometimes be too late):
 
         Machine machine5 = new Machine();
-        Camera camera3 = (Camera) machine5;
+//        Camera camera3 = (Camera) machine5;
 
         //Here, the variable camera3 is now pointing to a Machine object.
         //There is nothing I can do to change the fact that camera3 is pointing to a Machine object (and not a camera object)...
 
         //So when I try to call Camera methods that the Machine object doesn't have...this gives me a ClassCastException error on runtime
 
-        camera3.start();
-        camera3.snap();
+//        camera3.start();
+//        camera3.snap();
 
         //I only see this problem at runtime, hence why it is compiling above with no problem...
 
         //So upcasting is a lot 'safer' than downcasting. I will want to be really certain of my code when downcasting...
 
+        doStart(camera1);
+
+        //See my notes on Polymorphism for further explanation to the above and below doStart
+        //But basically what polymorphism allows me to do is to pass a Camera object / reference to the doStart method
+        //The doStart method is actually expecting a Machine object / reference
+        //But because Camera extends Machine, I can actually pass a Camera object instead (into doStart)
+        //Polymorphism guarantees me that wherever a parent class is expected, I can use a child class of that parent instead
+
+    }
+
+    public static void doStart(Machine machine){
+        machine.start();
     }
 }

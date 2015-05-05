@@ -58,6 +58,14 @@ public class Generics_1 {
 
         System.out.println("End of for loop");
 
+        System.out.println("Start of alternative for loop - doesn't matter which one you use");
+
+        for(String values : strings){
+            System.out.println(values);
+        }
+
+        System.out.println("End of alternative for loop - doesn't matter which one you use");
+
         /************ THERE CAN BE MORE THAN 1 TYPE ARGUMENT *************/
 
         //A brief example below...the type parameters are separated by a comma:

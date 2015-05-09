@@ -1,3 +1,5 @@
+package inheritance;
+
 public class Inheritance_Machine {
 
     private String modelName;

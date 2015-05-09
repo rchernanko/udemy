@@ -1,5 +1,8 @@
+package generics_1;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import inheritance.Inheritance_Animal;
 
 public class Generics_1 {
 
@@ -88,9 +91,13 @@ public class Generics_1 {
         //And just for reference, note that the classes declared in the diamond brackets can be any class (including one I have created)
         //For example...
 
-        ArrayList<Inheritance_Animal> test = new ArrayList<>();
+        ArrayList<Inheritance_Animal> test = new ArrayList<Inheritance_Animal>();
 
-        //I can access Inheritance Animal in this class because it is a public class
+        //I can access Inheritance Animal in this class because it is a public class and I have imported it at the top
+
+        //One really good thing to note as this caught me out at the time.....Classes in the default package cannot
+        //be imported by classes in packages. This is why you should not use the default package.
+        //Above is from Stack Overflow and I have saved an article to my Evernote
 
     }
 }

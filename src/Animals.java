@@ -1,3 +1,5 @@
+import inheritance.Inheritance_Animal;
+
 public class Animals extends Inheritance_Animal {
 
     @Override

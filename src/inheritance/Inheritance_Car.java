@@ -1,3 +1,5 @@
+package inheritance;
+
 public class Inheritance_Car extends Inheritance_Machine {
 
     @Override

@@ -1,3 +1,5 @@
+package inheritance;
+
 public class Inheritance_Person {
 
     public String name;

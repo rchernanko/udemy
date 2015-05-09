@@ -1,3 +1,5 @@
+package inheritance;
+
 public class Inheritance_Animal {
 
     private String animalName;

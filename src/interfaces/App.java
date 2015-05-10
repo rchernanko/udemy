@@ -16,7 +16,6 @@ public class App {
 
         //I can do the above because Machine implements the Info interface
         //but my main question is why would you want (where is it useful) to define the variable as type Interface? I don't quite understand...why isn't info1 variable of type Machine?
-        //How is the memory management working here also? One to talk through.
 
         info1.showInfo();
 
@@ -33,13 +32,10 @@ public class App {
 
         //So the above is going to run the overriding showInfo method within the Person class.
 
-        //Need to come back to the below. It is intrinsically linked to the method below outputInfo
-        //Not sure I understand this. Comes from the Udemy video at around 12 mins
-
         System.out.println();
 
         outputInfo(mach1);
-        outputInfo(person1);
+        outputInfo(info2);
         //So in the above, I am passing mach1 and person1 respectively into the outputInfo method as arguments
     }
 

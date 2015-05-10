@@ -18,18 +18,19 @@ public class App {
 
         showList(list);
 
-        //In the above, I am passing the ArrayList of Strings to the showList method (see below).
+        //In the above, I am passing the ArrayList of Strings (entitled 'list) to the showList method (see below).
 
     }
 
     public static void showList(ArrayList<String> list) {
         for (String things : list) {
             System.out.println(things);
-            //Assign all the values in list to a string called things + then print out the value in the list I have passed into the showList method
+            //Assign all the values in 'list' to a string called 'things' + then print out all the value in the 'things'
+            //I have passed into the showList method
         }
     }
 
     //Making the above method static because I don't want to instantiate an App object
-    //i.e. I don't have to do this, App app1 = new App();
+    //i.e. I don't have to write App app1 = new App();
     //If the method is static, I can call it within the same class (in this instance, App), and not have to instantiate
 }

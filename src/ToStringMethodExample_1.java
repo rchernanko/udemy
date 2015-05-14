@@ -17,7 +17,7 @@ public class ToStringMethodExample_1 {
     //With the above, because there is a + (and they are string values), every time you use the +, you are creating a new version of the object
     //see stringbuilder practice for more information. concatenating strings. every time you have a + between 2 strings, you're creating 2 string objects.
     //bad from a memory management perspective
-    //there is instead another way to do the above, which is more efficient:
+    //there is instead another way to do the above, which is more efficient - see below:
 
 
     @Override

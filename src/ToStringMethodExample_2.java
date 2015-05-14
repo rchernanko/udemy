@@ -11,7 +11,14 @@ public class ToStringMethodExample_2 {
 
 //If I run the above example (and try to print the object reference 'test1'), I am presented with a hashcode.
 //I do not have an overriding toString() method and so the compiler writes here test1.toString()
-//In the below class I will add an overriding toString() method.
+
+
+
+
+
+
+
+//In the below class (which is totally separate to the above) I will add an overriding toString() method.
 
 class Richard {
 
@@ -27,10 +34,12 @@ class Richard {
         return this.age + " " + this.name;
     }
 
-    public static void main(String[] args) {
-     Richard test = new Richard(6, "John");
+    //BUT the above is not great from a memory efficiency perspective (I could use StringBuilder instead - see ToStringMethodExample_1 class)
 
-        System.out.println(test);
+    public static void main(String[] args) {
+     Richard richard = new Richard(6, "John");
+
+        System.out.println(richard);
     }
 
 }

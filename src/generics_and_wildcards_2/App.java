@@ -58,12 +58,12 @@ public class App {
     //If I use a wildcard, this means that I can pass any object as a parameterised type into the ArrayList (in this instance)
 
     //The disadvantage of this though = Because the showList1 method does not know which class I will pass into it (as a parameterised type),
-    //I have to use 'Object' in my for loop (because all objects are subclasses of the parent class 'Object')
-    //And the use of Object means that I CANNOT CALL / access any Camera or Machine specific methods (unless I use casting)
+    //I have to use 'Object' in my for loop (because all classes are subclasses of the parent class 'Object')
+    //And the use of Object means that I CANNOT CALL / access any Camera or Machine specific methods (unless I use casting, which can be complicated)
 
     public static void showList1(ArrayList<?> list) {
         for (Object things1 : list) {
-            System.out.println(things1);
+            System.out.println("Showlist1 : " + things1);
         }
     }
 
@@ -81,7 +81,7 @@ public class App {
 
     public static void showList2(ArrayList<? extends Machine> list){
         for (Machine things2 : list) {
-            System.out.println(things2);
+            System.out.println("showlist2 : " + things2);
             things2.start();
         }
     }

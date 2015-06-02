@@ -3,12 +3,13 @@
 2)
 
 So the first thing I have done is to create three classes.
-The parent class is Machine and both Camera + Car are subclasses of Machine.
+The parent class is Machine, and both Camera + Car are subclasses of Machine.
 At this stage, the Machine class is not abstract (but you will see from the below that further changes have been made.
-However, at the time of writing, the method signature is public class Machine.
+However, at the time of writing, the method signature is "public class Machine".
 
-In the 'make-believe' program I'm about to build, the Camera and Car classes have several things in common, for example, they both have Ids.
-And because they both extend from Machine, I can add a variable to Machine (plus some getters and setters) + therefore Camera and Car will inherit
+In the 'make-believe' program I'm about to build, the Camera and Car classes have several things in common, for example,
+they both have Ids. And because they both extend from Machine, I can add a variable to Machine (plus some getters and
+setters) + therefore Camera and Car will inherit - see the implementation below.
 
 Next comment is after "car1.setId(7);" in the App.java class
 
@@ -29,11 +30,12 @@ public abstract class Machine {
     }
 
     //5) So I've now addded abstract into the method signature and am now going to add some abstract methods.
+
     //Abstract classes can have abstract methods
 
     //I've decided that I want to force all Machines to have / implement a method 'start' (For my program I've thought
-    //that every Machine (e.g. Camera and Car) must have a start method to start that particular machine.
-    //To do that, I can add an abstract method to Machine.
+    //that every Machine (e.g. Camera and Car) must have a start method to start that particular machine).
+    //To do that, I can add an abstract 'start' method to Machine.
 
     //Abstract methods are appropriate to use if I want to force the child classes of Machine to implement it, BUT at the
     //same time, I do not want to implement the method in the abstract class itself (e.g. because the implementation of
@@ -48,7 +50,9 @@ public abstract class Machine {
     //And once I've written the above method, I am then forced to implement the method in Camera and Car (Machine's subclasses)
     //So I'll do that now.
 
-    //6) And I can also call abstract methods within non-abstract methods, as below:
+    //6) Once I've done that...
+
+    //And I can also call abstract methods within non-abstract methods, as below:
 
     public abstract void doStuff();
     public abstract void shutdown();
@@ -67,8 +71,4 @@ public abstract class Machine {
 
     //And what I'll also now do, is call the run method in the App class (go to App class now).
 
-
-
-
-    //8) Using abstract methods is very similar to using interfaces
 }

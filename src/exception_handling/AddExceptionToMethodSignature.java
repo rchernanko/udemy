@@ -13,11 +13,11 @@ public class AddExceptionToMethodSignature {
         //An exception is part of error-handling mechanism
         //FYI - An Exception is just another object / class
 
-        File file = new File("test.txt");
+        File file = new File("exception_handing_test.txt");
 
         //There is a class called File, as above. In the constructor of File, I can pass a file name into it
 
-        //If I wanted to read the file, test.txt, the next step could be to declare a FileReader class, as below:
+        //If I wanted to read the file, exception_handing_test.txt, the next step could be to declare a FileReader class, as below:
 
         FileReader fr = new FileReader(file);
 
@@ -36,8 +36,12 @@ public class AddExceptionToMethodSignature {
 
         //If I were to run this class now, my 'stack trace' in the console would be red and show an error (because there is no text.txt in my project)
 
+        //FYI - Note that at present, the above will not throw an error because there is a file named "exception_handing_test.txt"
+        //actually present in my Udemy project. However, if I were to delete / rename the file, the FileNotFoundException
+        //would be thrown.
+
         //In the stack trace, the line at the very top will tell you why your error occurred. In this instance:
-        //"Exception in thread "main" java.io.FileNotFoundException: test.txt (No such file or directory)"
+        //"Exception in thread "main" java.io.FileNotFoundException: exception_handing_test.txt (No such file or directory)"
 
         //If I also look further down in the stack trace, I can also understand where in my code this FileNotFoundException
         //has been thrown - App.java:22.

@@ -17,7 +17,11 @@ public class SurroundWithTryCatch {
 
     public static void main(String[] args) {
 
-        File file = new File("test.txt");
+        File file = new File("exception_handing_test.txt");
+
+        //FYI - Note that at present, the above will not throw an error because there is a file named "exception_handing_test.txt"
+        //actually present in my Udemy project. However, if I were to delete / rename the file, the FileNotFoundException
+        //would be thrown.
 
         try {
             FileReader fr = new FileReader(file);

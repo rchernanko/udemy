@@ -37,8 +37,12 @@ public class Demo3 {
         //So because I have thrown this exception to the next stack (which in this case is the main method), what I will
         //now have to do is handle the thrown exception in the main method
 
-        File file = new File("test.txt");
+        File file = new File("exception_handing_test.txt");
         FileReader fr = new FileReader(file);
+
+        //FYI - Note that at present, the above will not throw an error because there is a file named "exception_handing_test.txt"
+        //actually present in my Udemy project. However, if I were to delete / rename the file, the FileNotFoundException
+        //would be thrown.
 
     }
 }

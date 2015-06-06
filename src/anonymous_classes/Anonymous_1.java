@@ -1,11 +1,16 @@
-//Anonymous classes are a way of either:
+/*
 
-//1) Extending an existing class, or;
-//2) Implementing an interface
+Anonymous classes are a way of either:
 
-//in such a way that you only need to do it once, it is a 'one-shot' thing.
+1) Extending an existing class, or;
+2) Implementing an interface
 
-//John says it is often quite useful
+in such a way that you only need to do it once, it is a 'one-shot' thing.
+
+John says it is often quite useful
+
+*/
+
 
 package anonymous_classes;
 

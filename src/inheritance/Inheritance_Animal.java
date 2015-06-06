@@ -6,6 +6,18 @@ public class Inheritance_Animal {
     private boolean animalHasATail;
     private int animalAge;
 
+    /*
+
+    If I wanted to do the setters as a constructor, it might look like this:
+
+    public Inheritance_Animal(String animalName, boolean animalHasATail, int animalAge){
+        this.animalName = animalName;
+        this.animalHasATail = animalHasATail;
+        this.animalAge = animalAge;
+    }
+
+     */
+
     public void setAnimalName(String animalName){
         this.animalName = animalName;
     }

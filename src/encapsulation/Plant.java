@@ -39,7 +39,9 @@ public class Plant {
     //to ever access it, other than the getData class. Therefore, we will make it private (see below)
 
     public String getData(){
-        String data = "some stuff" + calculateGrowthForecast();
+        String data;
+        data = "some stuff" + calculateGrowthForecast();
+        System.out.println(data);
         return data;
     }
 
@@ -52,5 +54,13 @@ public class Plant {
     //If it needs to be accessible in a subclass then make it protected
     //And make the stuff you want your end user to use, public. But try not to make any data public except for constants
 
-    //The latter part of the tutorial gave a little tour of the Java API documentation (quite useful, we also covered this on the QA course)
+    //The latter part of the tutorial gave a little tour of the Java API documentation (quite useful, we also covered this on
+    //the QA course)
+}
+
+class App{
+    public static void main(String[] args) {
+        Plant plant = new Plant();
+        plant.getData();
+    }
 }

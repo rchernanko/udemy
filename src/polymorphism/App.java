@@ -6,7 +6,8 @@ public class App {
 
     //What is polymorphism?
 
-    //In a nutshell, if you have a child class of some parent class, you can always use the child class anywhere where you'd normally use the parent class
+    //In a nutshell, if you have a child class of some parent class, you can always use the child class anywhere
+    //where you'd normally use the parent class
 
     //Some examples below...
 
@@ -30,11 +31,13 @@ public class App {
         plant3.grow();
 
         //The above will call the grow method in the Tree object...
-        //It doesn't matter if plant3 is a Plant type variable. It is pointing at a Tree object, so will access the grow method in Tree
+        //It doesn't matter if plant3 is a Plant type variable. It is pointing at a Tree object, so will access the
+        //grow method in Tree
 
         tree.shedLeaves();
 
         //But i can't do the below...
+
         //plant3.shedLeaves();
 
         //The reason for this is that it is the actual variable (and its type) that determines which methods you can call.
@@ -42,9 +45,10 @@ public class App {
 
         //GREAT SUMMARY:
 
-        //So the 'type' of my variable determines which methods I can call (e.g. 'Plant plant45' means that I can only call Plant methods)
-        //But it's the object that my variable refers to that determines which methods will actually be called (e.g. plant45.grow will actually
-        //call the start method within the Tree object, because:
+        //So the 'type' of my variable determines which methods I can call (e.g. 'Plant plant45' means that I can only
+        //call Plant methods)
+        //But it's the object that my variable refers to that determines which methods will actually be
+        //called (e.g. in the below, plant45.grow will actually call the start method within the Tree object, because:
 
         //Plant plant45 = new Tree();
 

@@ -1,7 +1,8 @@
 package interfaces;
 
 public class Person implements Info, SecondInterface {
-    //So the implements basically means - take the methods in the interface "Info" and make sure they are used here.
+    //So the implements basically means - take the methods in the interface "Info" and "SecondInterface"
+    //and make sure they are used here.
     //A class can implement multiple interfaces at once. But can only extend from one parent class.
 
     private String name;

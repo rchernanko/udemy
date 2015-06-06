@@ -44,7 +44,7 @@ public class String_Builder_Formatting_2 {
         System.out.printf("This is my current cost : %d and this is my final cost : %d\n", 5, 10);
 
         //sout (printf) = f stands for format. Doesn't create a new line after output.
-        //sout (printf + %d) = allows you to format an integer. You can pass a value or variable into the sentence
+        //sout (printf + %d) = allows you to format an integer. You can pass an int value or variable into the sentence
 
         int age = 2;
 

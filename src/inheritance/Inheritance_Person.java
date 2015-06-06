@@ -6,8 +6,8 @@ public class Inheritance_Person {
     public String eyeColour;
     public int waistSize;
 
-    public static void main(String[] args) {
-    }
+    //Above should really be private with getters and setters.
+    //But have just done for quickness!
 
     public void wakeUp(){
         System.out.println(this.name + " is waking up");

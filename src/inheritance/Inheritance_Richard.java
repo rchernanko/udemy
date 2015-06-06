@@ -3,8 +3,8 @@ package inheritance;
 public class Inheritance_Richard extends Inheritance_Person {
 
     //Because this class extends another, this class inherits the other fields and methods from the other class
-    //inheritance.Inheritance_Person is my parent class
-    //inheritance.Inheritance_Richard is my child class
+    //Inheritance_Person is my parent class
+    //Inheritance_Richard is my child class
     //Private fields and methods are not inherited - they cannot be accessed in the child class
 
     public void wakeUp(){

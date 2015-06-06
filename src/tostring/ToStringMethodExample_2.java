@@ -16,10 +16,6 @@ public class ToStringMethodExample_2 {
 
 
 
-
-
-
-
 //In the below class (which is totally separate to the above) I will add an overriding toString() method.
 
 class Richard {
@@ -36,7 +32,8 @@ class Richard {
         return this.age + " " + this.name;
     }
 
-    //BUT the above is not great from a memory efficiency perspective (I could use StringBuilder instead - see ToStringMethodExample_1 class)
+    //BUT the above is not great from a memory efficiency perspective (I could use StringBuilder instead
+    //- see ToStringMethodExample_1 class)
 
     public static void main(String[] args) {
      Richard richard = new Richard(6, "John");
@@ -46,6 +43,6 @@ class Richard {
 
 }
 
-//In the above example, I have created an overriding toString() method which is invoked when I try to print out the object reference 'test'
-//Rather than printing a hashcode, it prints something that allows me to identify the object reference in question
-//Very useful for debugging.
+//In the above example, I have created an overriding toString() method which is invoked when I try to print out the
+//object reference 'richard'. Rather than printing a hashcode, it prints something that allows me to identify the object
+//reference in question. Very useful for debugging.

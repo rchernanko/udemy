@@ -39,7 +39,7 @@ public class Plant {
         //As long as I have a reference to a Plant object, I can easily access 'name'.
 
         //BUT, public variables are bad practice!!! Does not encourage good encapsulation
-        //You want people to only be able to access them via methods, so that you can control what's happening with them
+        //You want people to only be able to access class variables via methods, so that you can control what's happening with them
 
         //If you do want to use a public variable though, most often you will make it a final / constant and static variable.
         //See for example, 'ID' above. This is static and final. Notice the naming conventions for the variable name are
@@ -72,7 +72,6 @@ public class Plant {
     //3) They can also be accessed by classes in the same package as the class in which they are declared (See 'Field' class)
 
 
-    //I wonder if interfaces work in the same way? Is an interface classed as a 'child' class?
 
     //Another type of modifier is no modifier!
 

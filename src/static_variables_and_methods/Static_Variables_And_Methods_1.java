@@ -35,12 +35,13 @@ public class Static_Variables_And_Methods_1 {
     //Static methods can access static class variables (in this instance 'age'), but cannot access non-static variables (e.g. name)
     //Won't work in showInfo method : System.out.println(name);
     //BUT non-static methods can access static class variables.
-    //Always remember that when an object instance is created, it already knows about the class (static) variables and methods. See below as an example.
+    //Always remember that when an object instance is created, it already knows about the class (static) variables and methods.
+    //But it doesn't necessarily know about non-static variables and methods.
+    //See below as an example.
 
     public void nonStaticMethodCanAccessStaticVariables(){
         System.out.println(age);
     }
-
 
 }
 

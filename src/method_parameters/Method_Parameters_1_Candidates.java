@@ -39,7 +39,7 @@ class Candidates{
         jimmyBullard.printCandidateDetails("Jimmy Bullard", 33);
         jimmyBullard.printCandidateSuitability("absolutely not suitable");
         jimmyBullard.printRequiredSalary(requestedSalary, requestedBonus);
-        // So I can pass variables of the right type into the method parameter
+        // So I can pass values of the right type into the method parameter
         System.out.println();
 
         johnDavis.printCandidateDetails("John Davis", 27);

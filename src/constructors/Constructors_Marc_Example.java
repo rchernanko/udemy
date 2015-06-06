@@ -24,8 +24,6 @@ public class Constructors_Marc_Example {
     public Constructors_Marc_Example() {
     }
 
-    //is this correct though???? Is this the right way to set up my private instance variables, with getters, setters and constructors?
-
     public Constructors_Marc_Example(String animalName, int animalAge){
         setAnimalName(animalName);
         setAnimalAge(animalAge);

@@ -14,7 +14,8 @@ public class Classes_8_City {
     }
 
     public int getEstimatedNumberOfDailyCommuters(){
-        int commuters = (cityPopulation/100) * 70;
+        int commuters;
+        commuters = (cityPopulation/100) * 70;
         return commuters;
     }
 }

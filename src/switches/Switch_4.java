@@ -7,9 +7,7 @@ public class Switch_4 {
     public static void main(String[] args) {
 
         Scanner tube1 = new Scanner(System.in);
-
         System.out.println("Please enter a Tube line");
-
         String tubeChoice = tube1.nextLine();
 
         switch(tubeChoice){

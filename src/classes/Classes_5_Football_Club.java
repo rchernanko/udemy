@@ -20,7 +20,9 @@ public class Classes_5_Football_Club {
 
     int calculateDesiredStadiumCapacity(){
 
-        int perfectAmount = stadiumCapacity * 2;
+        int perfectAmount;
+
+        perfectAmount = stadiumCapacity * 2;
 
         return perfectAmount;
     }

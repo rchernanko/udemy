@@ -2,8 +2,8 @@ package for_and_while_loops;
 
 public class ForAndWhileLoops_2 {
 	public static void main(String[] args) {
-		boolean loop1 = true;
 
+		boolean loop1 = true;
 		System.out.println(loop1);
 
 		boolean loop2 = 4 < 2;
@@ -21,14 +21,16 @@ public class ForAndWhileLoops_2 {
 		System.out.println(loop3);
 		
 		int value2 = 15;
-		
 		while (value2 < 32)
 		{
 			System.out.println("Hello" + value2);
-			// If i run this without the below code line, the loop will keep being executed and my console will not stop until I tell it too :-)
+			// If i run this without the below code line, the loop will keep being executed and my console will not
+			// stop until I tell it too :-)
 			
 			value2 = value2 + 1;
-			//The above is basically saying. While the value is less than 20, print out the statement and then add 1 to the value within the variable 'value'.
+
+			//The above is basically saying. While the value is less than 20, print out the statement and then add 1
+			// to the value within the variable 'value'.
 		}
 				
 	}

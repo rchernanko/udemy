@@ -11,8 +11,6 @@ public class GettingUserInput_3 {
                 .println("Hi. My name is Bob the computer. What is your first name?");
 
         String firstName = input.nextLine();
-        // how would you do this with a char type (instead of string?) - ask one
-        // of the others
 
         System.out.println("Great. So your first name is " + firstName + "\n");
 

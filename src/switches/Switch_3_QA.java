@@ -7,11 +7,8 @@ public class Switch_3_QA {
     public static void main(String[] args) {
 
         Scanner month = new Scanner(System.in);
-
         System.out.println("Please enter a number between 1 and 12");
-
         int monthNumber = month.nextInt();
-
         switch(monthNumber){
 
                 case 1:

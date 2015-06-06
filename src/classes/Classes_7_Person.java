@@ -18,7 +18,9 @@ public class Classes_7_Person {
     //The below method returns an int value
     int calculateDaysOld(){
 
-        int totalDaysOld = age * 365;
+        int totalDaysOld;
+
+        totalDaysOld = age * 365;
 
         return totalDaysOld;
     }

@@ -27,16 +27,14 @@ public class MultidimensionalArrays_1 {
 
         System.out.println(names[0][1]);
 
-        System.out.println("The value is names.length is " + names.length);
+        System.out.println("The value in names.length is " + names.length);
         //names.length refers to how many rows / how many arrays there are in the multidimensional array (i.e. the first value, 2).
 
         for(int numberOfArrays = 0; numberOfArrays<names.length; numberOfArrays++){
-            for(int numberOfColumns = 0; numberOfColumns<names[numberOfArrays].length; numberOfColumns++){
-                System.out.print(names[numberOfArrays][numberOfColumns] + "\t");
+            for(int arrayLength = 0; arrayLength<names[numberOfArrays].length; arrayLength++){
+                System.out.print(names[numberOfArrays][arrayLength] + "\t");
             }
-
             System.out.println();
         }
-
     }
 }

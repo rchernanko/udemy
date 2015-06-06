@@ -7,9 +7,7 @@ public class Switch_5 {
     public static void main(String[] args) {
 
         Scanner drink = new Scanner(System.in);
-
         System.out.println("What's your favourite alcoholic drink");
-
         String favouriteDrink = drink.nextLine();
 
         switch(favouriteDrink){

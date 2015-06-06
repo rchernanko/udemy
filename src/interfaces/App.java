@@ -15,13 +15,17 @@ public class App {
         Info info1 = new Machine();
 
         //I can do the above because Machine implements the Info interface
-        //but my main question is why would you want (where is it useful) to define the variable as type Interface? I don't quite understand...why isn't info1 variable of type Machine?
 
         info1.showInfo();
 
-        //because the info1 variable is of type Info, I can only access the overriding methods within Machine that are implemented from the Info interface.
+        //because the info1 variable is of type Info, I can only access the overriding methods within Machine
+        //that are implemented from the Info interface.
         //So i cannot see the non-overriding methods of Machine when I do info1.
         //So for example, I couldn't do info1.start - wouldn't be valid
+        //The above is going to run the overriding showInfo method within the Machine class.
+
+
+        //I have some great, great explanation of the above in the package polymorphism)
 
         Info info2 = person1;
 

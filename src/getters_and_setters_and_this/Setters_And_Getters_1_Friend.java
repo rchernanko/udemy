@@ -1,3 +1,5 @@
+package getters_and_setters_and_this;
+
 public class Setters_And_Getters_1_Friend {
 
     private String name;

@@ -1,3 +1,5 @@
+package arrays_multidimensional;
+
 public class MultidimensionalArrays_1 {
 
     public static void main(String[] args) {

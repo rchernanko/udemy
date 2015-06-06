@@ -1,3 +1,5 @@
+package getters_and_setters_and_this;
+
 public class This_2_Drinks {
 
     public static void main(String[] args){

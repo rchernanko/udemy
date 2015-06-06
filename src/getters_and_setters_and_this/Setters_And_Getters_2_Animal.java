@@ -1,3 +1,5 @@
+package getters_and_setters_and_this;
+
 public class Setters_And_Getters_2_Animal {
 
     private String animalName;

@@ -1,3 +1,5 @@
+package static_variables_and_methods;
+
 public class Static_Variables_And_Methods_1 {
 
     public String name;

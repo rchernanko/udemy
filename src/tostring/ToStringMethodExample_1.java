@@ -1,3 +1,5 @@
+package tostring;
+
 public class ToStringMethodExample_1 {
 
         int rollno;

@@ -1,3 +1,5 @@
+package tostring;
+
 public class ToStringMethodPractice_1 {
 
 //    public String toString(){

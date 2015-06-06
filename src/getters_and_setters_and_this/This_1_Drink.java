@@ -1,3 +1,5 @@
+package getters_and_setters_and_this;
+
 public class This_1_Drink {
 
     private String drinkName;

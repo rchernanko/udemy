@@ -1,6 +1,7 @@
 package equals_method;
 
 //First thing I've done is to create a Person blueprint with some variables, a constructor and a toString method.
+//I generated the toString using right-click and generate sources.
 
 public class Person {
 
@@ -32,11 +33,12 @@ class App {
         Person person1 = new Person(5, "Bob");
         Person person2 = new Person(8, "Sue");
 
-        //If I want to know whether these objects are equal or not, I can do the below:
+        //If I want to know whether these objects are equal or not, I can try the below:
 
         System.out.println(person1 == person2);
 
         //The result when I run the above is false.
+
         //Now with primitive types (e.g. int, double etc), the == tells me whether two primitive types have the same
         //value or not
 
@@ -51,21 +53,23 @@ class App {
         System.out.println("After assigning the references to the same object, the result is " + (person1 == person2));
 
         //So the KEY point here is, to reiterate, is that using == with non-primitive types simply tells you whether
-        //the references are pointing to the same object. It won't be comparing the contents of that object. I.e. it
+        //the references are pointing to the same object. It doesn't compare the contents of those 2 objects. I.e. it
         //won't give you any insight as to whether 5 is equal to 8, or whether Bob is equal to Sue.
 
         //To illustrate this even more, look at the below. The result when running this will be false (because the ==
         //ignores the contents of the two objects and simply tells you whether they're pointing to the same object or
-        //not. In terms of memory, they are 2 different objects, and their contents are irrelevant when using a == (with
-        //non-primitive types).
+        //not). In terms of memory, person3 and person4 are pointing to 2 different objects, and with non-primitive types,
+        //the contents are not compared when using ==
 
         Person person3 = new Person(13, "Richard");
         Person person4 = new Person(13, "Richard");
 
         System.out.println("Is person3 == to person4? The answer is " + (person3 == person4));
 
-        //What we often want to do is to compare the contents of objects, e.g. I want to compare whether the contents
-        //of person1 is the same as person2
+        //However, what we often want to do is to compare the actual contents of 2 objects, e.g. I want to compare
+        //whether the contents of person1 are the same as person2
+
+        //12 mins 45 seconds left
 
 
 

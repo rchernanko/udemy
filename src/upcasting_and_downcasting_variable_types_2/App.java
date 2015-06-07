@@ -17,6 +17,7 @@ public class App {
 
         //Here, I have upcasted spurs1 (which points at a Spurs object) to footballClub2 (which points at a FootballClub object)
 
+        System.out.println("Upcasting example: ");
         footballClub2.winAGame();
 
         // *** DOWNCASTING EXAMPLE ***
@@ -27,7 +28,8 @@ public class App {
 
         Spurs spurs2 = (Spurs) footballClub3;
 
-        //So in the above I have downcasted footballClub3 to spurs2. The variable 'spurs2' can now access the loseAGame method from the Spurs object
+        //So in the above I have downcasted footballClub3 to spurs2. The variable 'spurs2' can now access the loseAGame
+        //method from the Spurs object
 
         spurs2.loseAGame();
 

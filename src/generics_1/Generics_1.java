@@ -8,10 +8,11 @@ public class Generics_1 {
 
     //Just an introduction tutorial
     //A generic class is a class that can work with other objects
-    //You specify what type(s) of object(s) it can work with when you instantiate the class (when you create objects from the class)
+    //You specify what type(s) of object(s) it can work with when you instantiate the class (when you create objects
+    //from the class)
 
     //A simple example is as below, using the ArrayList class - John says that this is a key class to learn
-    //There are more ArrayList tutorials on www.caveofprogramming.com
+    //There are more ArrayList tutorials later on in the java beginners udemy coursr
 
     //Below shows the old style of doing generics (before Java 5) + the new style (after Java 5)
 
@@ -51,7 +52,7 @@ public class Generics_1 {
         //I don't have to downcast because I have already declared that the ArrayList 'strings' can work with String objects
         //(in this case, as return objects)
 
-        //And you can iterate through the ArrayList as per usual (using a for loop)
+        //And you can iterate through the ArrayList as per usual (using a for loop and .size)
 
         System.out.println("Start of for loop");
 
@@ -75,8 +76,7 @@ public class Generics_1 {
 
         HashMap<String, Integer> map = new HashMap<String, Integer>();
 
-        //Watch John's free videos on the 'Collections framework' for more information on hashmaps and other key classes from
-        //the collections framework (mentioned in the tutorial)
+        //More information on hashmaps to come in later java beginners course videos
 
         /************ JAVA 7 STYLE *************/
 
@@ -85,10 +85,12 @@ public class Generics_1 {
 
         ArrayList<Integer> someList = new ArrayList<>();
 
-        //In the above, Java infers that the new ArrayList object is still an ArrayList of Integers (you don't have to declare the type parameters again, after the '=')
+        //In the above, Java infers that the new ArrayList object is still an ArrayList of Integers (you don't have to
+        //declare the type parameters again, after the '=')
         //This is very useful as it reduces repetition
 
-        //And just for reference, note that the classes declared in the diamond brackets can be any class (including one I have created)
+        //And just for reference, note that the classes declared in the diamond brackets can be any class (including
+        //one I have created)
         //For example...
 
         ArrayList<Inheritance_Animal> test = new ArrayList<Inheritance_Animal>();

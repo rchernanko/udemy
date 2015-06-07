@@ -2,10 +2,6 @@ package generics_and_wildcards_1;
 
 import java.util.ArrayList;
 
-class Machine {
-
-}
-
 public class App {
 
     public static void main(String[] args) {
@@ -17,7 +13,6 @@ public class App {
         list.add("three");
 
         showList(list);
-
         //In the above, I am passing the ArrayList of Strings (entitled 'list) to the showList method (see below).
 
     }

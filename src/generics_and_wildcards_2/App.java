@@ -57,9 +57,11 @@ public class App {
 
     //If I use a wildcard, this means that I can pass any object as a parameterised type into the ArrayList (in this instance)
 
-    //The disadvantage of this though = Because the showList1 method does not know which class I will pass into it (as a parameterised type),
-    //I have to use 'Object' in my for loop (because all classes are subclasses of the parent class 'Object')
-    //And the use of Object means that I CANNOT CALL / access any Camera or Machine specific methods (unless I use casting, which can be complicated)
+    //The disadvantage of this though = Because the showList1 method does not know which class I will pass into it
+    //(as a parameterised type), I have to use 'Object' in my for loop (because all classes are subclasses of the
+    //parent class 'Object').
+    //And the use of Object means that I CANNOT CALL / access any Camera or Machine specific methods (unless I use
+    //casting, which can be complicated)
 
     public static void showList1(ArrayList<?> list) {
         for (Object things1 : list) {
@@ -67,7 +69,8 @@ public class App {
         }
     }
 
-    //I have then added the line 'showList1(camera)' within the main method of 'App' + this will now work
+    //I have then added the line 'showList1(camera)' within the main method of 'App' + this will now work.
+    //It also invokes the toString method within the Camera class
 
 
     ////////// WILDCARD UPPER BOUNDS //////////
@@ -76,7 +79,8 @@ public class App {
     //There are a few other things you can do with wildcards
     //One is that you can specify an upper bound to the wildcard
 
-    //So the scenario is - I want to pass an ArrayList of Machines or ANY subclass of the parameterised type 'Machine' to showList1...
+    //So the scenario is - I want to pass an ArrayList of Machines or ANY subclass of the parameterised type 'Machine'
+    //to showList1...
     //For ease, I will create a new method 'showList2' (to demonstrate)
 
     public static void showList2(ArrayList<? extends Machine> list){
@@ -99,8 +103,8 @@ public class App {
 
     //You can also specify a lower bound to a wildcard (but it is not as useful) - see showList3 below
 
-    //The '? super Camera' means that I can pass in any class that is Camera OR a super class of Camera (in this case, as a
-    //parameterised type of ArrayList)
+    //The '? super Camera' means that I can pass in any class that is Camera OR a super class of Camera (in this case,
+    //as a parameterised type of ArrayList)
     //BUT again, I have to use 'Object' in my for loop (because showList3 doesn't know what I am going to pass into it)
     //So I cannot call Camera methods, only Object methods
 

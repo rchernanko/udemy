@@ -49,21 +49,23 @@ public class App{
 
         Machine machine3 = camera1;
 
-        //More subtly, because machine3 is of type Machine, and Camera extends Machine, I can also get a Machine type variable, machine3, to point to the
-        //same Camera object as the reference camera1
+        //More subtly, because machine3 is of type Machine, and Camera extends Machine, I can also get a Machine type
+        //variable, machine3, to point to the same Camera object as the reference camera1
 
-        //And so in the above, I am setting machine3 to point at the same object that the camera1 is pointing to, a Camera object
+        //And so in the above, I am setting machine3 to point at the same object that the camera1 is pointing to, a
+        //Camera object
 
-        //And so this is what is known as 'UPCASTING'. I have upcasted camera1 to machine3. It's called up because I've gone 'up'
-        //the class hierarchy from Camera to Machine
+        //And so this is what is known as 'UPCASTING'. I have upcasted camera1 to machine3. It's called up because
+        //I've gone 'up' the class hierarchy from Camera to Machine
 
         machine3.start();
 
-        //The above will print out the Camera start method. Basically the reference machine3 doesn't actually do anything.
-        //But it points to a Camera object and so this is the method which is called (the Camera start method is called, not the Machine start method)
+        //The above will print out the Camera start method. Basically the reference machine3 points to a Camera
+        //object, and so it is the start method within the Camera object that is called (not the Machine start method)
 
-        //Very good explanation from john. It's like sticking a label on a car, and then asking the label to drive the car...
-        //The label is only a reference to the car object. The car object itself is the thing that will do the driving (not the label)
+        //Very good explanation from John. It's like sticking a label on a car, and then asking the label to drive the car...
+        //The label is only a reference to the car object. The car object itself is the thing that will do the
+        //driving (not the label)
 
         /*
 
@@ -76,9 +78,10 @@ public class App{
 
         GREAT SUMMARY:
 
-        So the 'type' of my variable determines which methods I can call (e.g. 'Machine machine87' means that I can only call Machine methods)
-        But it's the object that my variable refers to that determines which methods will actually be called (e.g. machine87.start will actually
-        call the start method within the Camera object, because:
+        So the 'type' of my variable determines which methods I can call (e.g. 'Machine machine87' means that I can
+        only call Machine methods).
+        But it's the object that my variable refers to that determines which methods will actually be called
+        (e.g. machine87.start will actually call the start method within the Camera object), because:
 
         Machine machine87 = new Camera();
 
@@ -88,12 +91,13 @@ public class App{
 
         Machine machine4 = new Camera();
 
-        //My problem - I want to access the 'snap' method within the Camera object class but I can't because machine4 is of type Machine
-        //(and Machine only has 1 method, start)...
+        //My problem - I want to access the 'snap' method within the Camera object class but I can't because machine4
+        //is of type Machine (and Machine only has 1 method, start)...
 
         //So how do I call snap? This is where downcasting comes in...
 
-        //But note that downcasting is considered to be fairly risky and unsafe...you really need to think carefully when using it
+        //But note that downcasting is considered to be fairly risky and unsafe...you really need to think
+        //carefully when using it
 
         Camera camera2 = (Camera) machine4;
 
@@ -106,18 +110,20 @@ public class App{
 
         camera2.start();
 
-        //One other thing to know - downcasting is quite risky because it won't show you certain errors until runtime (which can sometimes be too late):
+        //One other thing to know - downcasting is quite risky because it won't show you certain errors until
+        //runtime (which can sometimes be too late):
 
         Machine machine5 = new Machine();
-//        Camera camera3 = (Camera) machine5;
+        Camera camera3 = (Camera) machine5;
 
         //Here, the variable camera3 is now pointing to a Machine object.
         //There is nothing I can do to change the fact that camera3 is pointing to a Machine object (and not a camera object)...
 
-        //So when I try to call Camera methods that the Machine object doesn't have...this gives me a ClassCastException error on runtime
+        //So when I try to call Camera methods that the Machine object doesn't have...this gives me a
+        //ClassCastException error on runtime
 
-//        camera3.start();
-//        camera3.snap();
+        camera3.start();
+        camera3.snap();
 
         //I only see this problem at runtime, hence why it is compiling above with no problem...
 

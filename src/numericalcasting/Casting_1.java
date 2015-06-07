@@ -4,7 +4,8 @@ public class Casting_1 {
 
     public static void main(String[] args) {
 
-        //First useful thing - You can actually find out the minimum and maximum values of something by calling the class variables below:
+        //First useful thing - You can actually find out the minimum and maximum values of something by calling the
+        //class variables below:
 
         System.out.println(Byte.MIN_VALUE);
         System.out.println(Byte.MAX_VALUE);

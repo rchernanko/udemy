@@ -17,7 +17,10 @@ public class App {
 
         Laptop laptop2 = mac2;
 
-        //I am upcasting mac2 from a Mac variable type to a Laptop variable type (but both mac2 to laptop2 will still point to a Mac object)
+        //(The above is also the same as doing... Laptop laptop3 = new Mac();), but just using upcasting
+
+        //I am upcasting mac2 from a Mac variable type to a Laptop variable type (but both mac2 to laptop2 will still
+        //point to a Mac object)
 
         laptop2.startLaptop();
 

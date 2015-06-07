@@ -4,7 +4,7 @@ This is the simplest possible way to read a text file line by line.
 
  */
 
-package reading_text_files;
+package reading_text_files_with_scanner;
 
 import java.io.File;
 import java.io.FileNotFoundException;

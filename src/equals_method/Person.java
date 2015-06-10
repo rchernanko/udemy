@@ -145,18 +145,49 @@ class App {
 
         //So be careful...
 
-        //UP to 7 mins 15 secnods remaining
+        //A classic beginners mistake is comparing Strings with == and not .equals.
 
+        //In the case of the Strings and references below, Java optimises and actually points text1 and text2 to the
+        //same String object...(the below is basically a shortcut for String text1 = new String("hello")).
 
+        //So, when I compare the references text1 and text2 by using ==, while I would expect the answer to be false,
+        //Java has optimised them to point at the same object, and so it is actually true.
 
+        //Very tricky!!!
 
+        String text1 = "hello";
+        String text2 = "hello";
 
+        System.out.println("When I compare text1 and text2 using ==, the answer is : " + (text1 == text2));
 
+        //So actually the best thing, in fact the ONLY thing to do when comparing Strings and their contents, is to
+        //use the .equals method.
 
+        System.out.println(text1.equals(text2));
 
+        //The above will result "true"
 
+        //TO SUMMARISE, DON'T USE == WITH NON-PRIMITIVE TYPES (INCLUDING STRINGS). ALWAYS USE .EQUALS METHOD TO COMPARE
+
+        //To emphasise this even more, see the below:
+
+        String text3 = "hello";
+        String text4 = "helloqwerty".substring(0, 5);
+        //The substring method extracts gets "hello" from the above String
+
+        System.out.println(text4);
+        //The above prints hello
+
+        System.out.println(text3==text4);
+        //The above results in false (which is of course correct, seeing as text3 and text4 are pointing to different
+        //objects. So this basically emphasises that == does not compare the contents of these Strings (because they are
+        //both "hello")
+
+        //But if I want to check the contents of these Strings, the == is not going to give me that information.
+        //Therefore, I should always ALWAYS use the .equals method
+
+        System.out.println(text3.equals(text4));
+        //The above will result in true
 
     }
-
-
 }

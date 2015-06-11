@@ -2,6 +2,8 @@ package equals_method;
 
 //First thing I've done is to create a Person blueprint with some variables, a constructor and a toString method.
 //I generated the toString using right-click and generate sources.
+//Note that the equals method was not added when I created the class, it was added later on.
+//Please read down for more information
 
 public class Person {
 
@@ -45,32 +47,35 @@ class App {
         Person person1 = new Person(5, "Bob");
         Person person2 = new Person(8, "Sue");
 
-        //If I want to know whether these objects are equal or not, I can try the below:
+        //I then try the below to find out whether these objects are equal or not,
 
         System.out.println(person1 == person2);
 
         //The result when I run the above is false.
+        //BUT this is NOT because 5 is different to 8, or because Bob is different to Sue
 
-        //Now with primitive types (e.g. int, double etc), the == tells me whether two primitive types have the same
-        //value or not
+        //With primitive types (e.g. int, double etc), the == tells me whether two primitive types have the same
+        //value or not (as will be shown later on in this class)
 
         //HOWEVER, with non-primitive types (e.g. Person), the == tells me whether 2 references to objects are
-        //pointing at the same object or not...
+        //pointing at the same object or not. It DOESN'T look at the contents of these objects at all.
 
-        //So if I now assign person1 to point at the same object as person2, the result of the sout will be
+        //So if I now assign person1 to point to the same object as person2, the result of the sout will be
         //true because both references will be pointing to the same object
 
         person1 = person2;
 
-        System.out.println("After assigning the references to the same object, the result is " + (person1 == person2));
+        System.out.println("After assigning the 2 references to the same object, the result is " + (person1 == person2));
 
-        //So the KEY point here is, to reiterate, is that using == with non-primitive types simply tells you whether
+        //So the KEY point here, to reiterate, is that using == with non-primitive types simply tells you whether
         //the references are pointing to the same object. It doesn't compare the contents of those 2 objects. I.e. it
         //won't give you any insight as to whether 5 is equal to 8, or whether Bob is equal to Sue.
 
         //To illustrate this even more, look at the below. The result when running this will be false (because the ==
-        //ignores the contents of the two objects and simply tells you whether they're pointing to the same object or
-        //not). In terms of memory, person3 and person4 are pointing to 2 different objects, and with non-primitive types,
+        //ignores the contents of the two Person objects and simply tells you whether they're pointing to the same
+        //object or not).
+
+        //In terms of memory, person3 and person4 are pointing to 2 different objects, and with non-primitive types,
         //the contents are not compared when using ==
 
         Person person3 = new Person(13, "Richard");
@@ -79,7 +84,8 @@ class App {
         System.out.println("Is person3 == to person4? The answer is " + (person3 == person4));
 
         //However, what we often want to do is to compare the actual contents of 2 objects, e.g. I want to compare
-        //whether the contents of person1 are the same as person2
+        //whether the contents of the object person1 is pointing to are the same as the in the object person2 is
+        //pointing to
 
         //And this is where .equals comes in. See the below:
 
@@ -95,7 +101,7 @@ class App {
         //The easiest way to do this is to right-click within the Person class, choose generate 'equals and hashcode',
         //and then tick the fields that I feel are important to compare in the Person object. For example, if I
         //consider a Person object to be the same as another Person object ONLY if it has the same ID (and I don't care
-        //about the "name" field), then I would choose to generate the equals method using only the id. If I considered
+        //about the "name" field), then I would choose to generate the equals method using ONLY the id. If I considered
         //a Person object to only be the same as another person object if it has the same id AND name, then I would select
         //both id and name when generating the equals method.
 
@@ -103,7 +109,7 @@ class App {
         //name fields
 
         //So if I now run my code again, the sout above will result in "true" because the objects that my person3 and
-        //person4 references are pointing to, have the same contents (as judged by the overring .equals method).
+        //person4 references are pointing to, have the same contents (as judged by the overriding .equals method).
 
         Person person5 = new Person(4, "John");
         Person person6 = new Person(4, "John");
@@ -130,8 +136,8 @@ class App {
 
         System.out.println(int1 == int2);
 
-        //But be careful!!! I would expect the below to be true, but it's actually false! So in some instances, you must
-        //check whether the == (with primitive values) will actually give you the results you expect!
+        //But be careful!!! I would expect the below to result in true, but it's actually false! So in some instances,
+        //you must check whether the == (with primitive values) will actually give you the results you expect!
 
         Double double1 = 2.3;
         Double double2 = 2.3;
@@ -147,27 +153,28 @@ class App {
 
         //A classic beginners mistake is comparing Strings with == and not .equals.
 
-        //In the case of the Strings and references below, Java optimises and actually points text1 and text2 to the
-        //same String object...(the below is basically a shortcut for String text1 = new String("hello")).
+        String text1 = "hello";
+        String text2 = "hello";
+
+        //In the case of the Strings and references above, because the values of the String objects are the same (i.e.
+        //"hello"), Java has cleverly optimised and actually pointed text1 and text2 to the same String object...
+        //(FYI - Note that the above is basically a shortcut for String text1 = new String("hello")).
 
         //So, when I compare the references text1 and text2 by using ==, while I would expect the answer to be false,
         //Java has optimised them to point at the same object, and so it is actually true.
 
-        //Very tricky!!!
-
-        String text1 = "hello";
-        String text2 = "hello";
-
         System.out.println("When I compare text1 and text2 using ==, the answer is : " + (text1 == text2));
 
-        //So actually the best thing, in fact the ONLY thing to do when comparing Strings and their contents, is to
-        //use the .equals method.
+        //Very tricky, be careful!!!
+
+        //When comparing Strings (and their contents), the ONLY thing to do is to use the .equals method.
 
         System.out.println(text1.equals(text2));
 
         //The above will result "true"
 
-        //TO SUMMARISE, DON'T USE == WITH NON-PRIMITIVE TYPES (INCLUDING STRINGS). ALWAYS USE .EQUALS METHOD TO COMPARE
+        //TO SUMMARISE, DON'T USE == WITH NON-PRIMITIVE TYPES (INCLUDING STRINGS).
+        //ALWAYS USE .EQUALS METHOD TO COMPARE THE CONTENTS OF NON-PRIMITIVE OBJECTS
 
         //To emphasise this even more, see the below:
 
@@ -188,6 +195,5 @@ class App {
 
         System.out.println(text3.equals(text4));
         //The above will result in true
-
     }
 }

@@ -39,6 +39,19 @@ public class Robot {
 
     //Need to do a bit more reading on where and how these are used. Do we use them at all in our test framework?
 
-    //Up to 11 mins 30 seconds left
+    //JOhn says there is a good example of the use of inner classes in one of his future tutorials, the iterable
+    //interface
+
+    //6)
+    //Can I use the above inner class, Brain, outside of the class it's declared in, e.g. can I use it within App.java?
+    //It is common to use inner classes outside of the class it's declared in, but the way it's normally done is
+    //as below:
+
+    public Brain returnBrain() {
+        return new Brain();
+    }
+
+    //Now go to point 7 within App.java to see where I am calling the returnBrain method (which returns a new instance
+    //of Brain.
 
 }

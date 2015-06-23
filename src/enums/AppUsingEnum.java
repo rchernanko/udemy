@@ -79,6 +79,24 @@ public class AppUsingEnum {
 
         System.out.println(Animal.DOG);
 
-        //UP TO 4 mins 30 seconds to go
+        //There are also some special methods that Animal inherits from Enum (java.lang.Enum).
+        //One of these methods, name, will return the actual enum constant value as a String (turns an enum constant
+        //into a String). This is particularly useful as I have also overriden the toString method within Animal.
+        //Please see below:
+
+        System.out.println("Enum name as a String : " + Animal.MOUSE.name());
+
+        //And you can also do the reverse (get a String and turn it into an enum constant) with the valueOf method,
+        //for example:
+
+        //Here, I am assigning the value in the enum constant CAT into the animal2 reference variable.
+
+        Animal animal2 = Animal.valueOf("CAT");
+
+        System.out.println(animal2);
+
+        //FYI - All Java.Lang classes (e.g. Enum, Math, Number etc) are automatically available to me, I don't
+        //have to import them at the top of the class
+
     }
 }

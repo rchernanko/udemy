@@ -5,6 +5,8 @@ public enum Animal {
 
     //You might wonder what cat, dog and mouse are...
     //Well, they are actually objects + they are of the type Animal
+    //Is really important to know that CAT, DOG and MOUSE are not Strings, they are special objects (enum constants)
+    //But I can turn them into a String using the enum name method (see AppUsingEnum.java).
     //Please ignore the names in brackets, these are explained later on (in the notes below)
 
     //To show this, go back to AppUsingEnum and look at the sout (Animal.DOG.getClass());
@@ -13,7 +15,7 @@ public enum Animal {
 
     //So I am now going to give the Animal enum a constructor
 
-    //You can't actually declare the constructor in an enum as public, only private (or just leave it as Animal() { }
+    //You can't actually declare the constructor in an enum as public, only private (or just leave it as Animal() { })
 
     //In this case, I'll set it as private.
 

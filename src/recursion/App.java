@@ -84,8 +84,25 @@ public class App {
         return calculateFactorialNumber(factorial - 1) * factorial;
     }
 
-    //John also recommends looking at the Tower of Hanoi puzzle and trying to replicate that!
+    //Initially, I couldn't really get my head around the above. If I feed in 4, then why oh why does it return 24 (in
+    //terms of how does this return 24 programatically).
 
-    //I cannot get my head around how calculateFactorialNumber prints out 24....perhaps need to add to 'to do list' and
-    //ask one of the others at work...
+    //So sat down with Elizabeth and we wrote it down together:
+
+    /*
+
+    f = function
+
+    f(4)
+    =f(3) * 4
+    =f(2) * 3 * 4
+    =f(1) * 2 * 3 * 4
+
+    Last multiplication gives you 24
+
+    So the previous '*' is remembered...
+
+     */
+
+    //John also recommends looking at the Tower of Hanoi puzzle and trying to replicate that!
 }

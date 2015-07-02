@@ -55,5 +55,34 @@ public class App {
 
         //I've also created another class here to illustrate that the close method will be called autoamtically on ANY
         //class that implements AutoClosable
+
+
+        /*
+
+Initial question I had about the closing the BUfferedReader...
+
+Q)
+
+try.with resources - what about the br.close()? where should this go? or does the bufferedreader close
+automatically (because BufferedReader implements autoclosable?). check the comments + perhaps email him on udemy...?
+
+A) From John Purcell himself on the udemy comments:
+
+If you create an object within a try(), close() will be called automatically. This is only true if you create it within
+the round brackets immediately following try(); not true if you create it in the curly brackets where most of the code
+goes. However you do it, if you close BufferedReader or whatever class encloses the others, the close method will be automatically closed on the other objects.
+
+E.g. if you do
+
+try(BufferedReader br = new BufferedReader(new FileReader("something.txt"))) {
+
+...
+
+}
+
+The "try" here will automatically call br.close() at the closing curly bracket, and this will automatically close
+the FileReader as well.
+
+ */
     }
 }

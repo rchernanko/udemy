@@ -53,8 +53,8 @@ public class App {
         //So if you compare this code above to the blob of code in the 'reading_files_with_filereader' class, you will
         //see that this is much more readable + easier to maintain and understand :-)
 
-        //I've also created another class here to illustrate that the close method will be called automatically on ANY
-        //class that implements AutoClosable
+        //I've also created another class in this package called Temp to illustrate that the close method will be
+        //called automatically on ANY class that implements AutoClosable
 
 
         /*

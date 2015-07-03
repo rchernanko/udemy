@@ -3,7 +3,7 @@
 In this video, we look at reading files in Java with FileReader and BufferedReader.
 This is the old way of reading files.
 You can also use the Scanner class to read files + there are also some other, newer features in Java 7 that will be
-covered in future tutorials.
+covered in future tutorials (see the 'reading_files_with_try_resources' package)
 But the stuff in this package is still really useful to know because it's quite flexible in terms of the file types that
 can be read.
 
@@ -143,6 +143,7 @@ public class App {
 
         //So the above is incredibly ugly! The exceptions have built up and have cluttered my code
         //There is a nicer, simpler way to do this in Java 7, which will be covered in the next tutorial :-)
+        //See the 'reading_files_with_try_resources' package
 
         //There are a lot of comments in this class, so I have taken away the comments + just put the code in a duplicate
         //class within this package, called AppCodeOnly

@@ -57,11 +57,13 @@ public class WriteObjects {
 
             //It's quite simple really - head to point 3 within the Person class to see how...
 
-            //4) So now that we have made Person implement Serializable, when we run this main method again, we should
+            //4)
+
+            //So now that we have made Person implement Serializable, when we run this main method again, we should
             //no longer see any exception thrown
 
             //And actually, I've now also created a "serialization.bin" file in my project folder - have a look!
-            //So we have now serialized these two Person object instances - Java objects have now been turned into
+            //So we have now serialized these two Person object instances. Java objects have now been turned into
             //binary data and written to the serialization.bin file :-)
 
             //So now let's write some code that can deserialize this binary data (i.e. let's write code that allows us

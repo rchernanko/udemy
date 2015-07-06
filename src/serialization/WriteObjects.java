@@ -31,21 +31,18 @@ public class WriteObjects {
         //And I'll do all of this using "try with resources" - this means that I don't have to then close
         //fs (FileOutputStrem) because the try-with-resources does this automatically for me :-)
 
-        try (FileOutputStream fs = new FileOutputStream("serialization.bin")) {
+        try (FileOutputStream fs = new FileOutputStream("serialization.bin"); ObjectOutputStream os = new ObjectOutputStream(fs)) {
 
-            //The next thing we need is ObjectOutputStream (and pass the fs reference to its constructor)...
+            //I've also added an ObjectOutputStream within the try with resources block, and am passing the fs
+            //reference to its constructor...
 
-            ObjectOutputStream os = new ObjectOutputStream(fs);
+            //So both of the above objects FileOutputStream and ObjectOutputStream are declared within the try with
+            //resources block. And because of this, FileInputStream and ObjectInputStream are automatically closed :-)
 
             //And now, I want to write my Person object instances to my serialization.bin file:
 
             os.writeObject(mike);
             os.writeObject(sue);
-
-            //Unfortunately, because os is not created within the try-with-resources, we have to remember to close it
-            //(whereas fs is closed automatically)...
-
-            os.close();
 
             //So everything is good now yeah? NO!
 
@@ -69,7 +66,6 @@ public class WriteObjects {
             //So now let's write some code that can deserialize this binary data (i.e. let's write code that allows us
             //to read this binary data from within serialization.bin and turn it back into a Java object)
             //Go to point 5 within ReadObjects
-
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

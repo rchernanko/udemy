@@ -18,9 +18,10 @@ public class ReadObjects {
         //Rather than using FileOutputStream, let's use FileInputStream.
         //And rather than using ObjectOutputStream, let's use ObjectInputStream:
 
-        try (FileInputStream fi = new FileInputStream("serialization.bin")) {
+        try (FileInputStream fi = new FileInputStream("serialization.bin"); ObjectInputStream os = new ObjectInputStream(fi)) {
 
-            ObjectInputStream os = new ObjectInputStream(fi);
+            //So both of the above objects FileInputStream and ObjectInputStream are declared within the try with
+            //resources block. And because of this, FileInputStream and ObjectInputStream are automatically closed :-)
 
             //Now I can read from my file.
 
@@ -48,10 +49,6 @@ public class ReadObjects {
 
             System.out.println(person1);
             System.out.println(person2);
-
-            os.close();
-
-            //Remember to close os (it is not automatically closed because it is not in the try () statement.
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

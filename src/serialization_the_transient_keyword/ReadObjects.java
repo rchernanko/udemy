@@ -14,6 +14,12 @@ public class ReadObjects {
         try (FileInputStream fi = new FileInputStream(
                 "serialization_with_transient_keyword.bin"); ObjectInputStream os = new ObjectInputStream(fi)) {
 
+            //The above is a bit mental! Quite long. It can be cut down to the following but whether you do this or
+            //not, it's simply a matter of preference:
+
+            //try (ObjectInputStream os = new ObjectInputStream(
+            //new FileInputStream("serialization_with_transient_keyword.bin"))) {}
+
             Person person = (Person) os.readObject();
 
             System.out.println(person);

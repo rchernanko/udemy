@@ -11,6 +11,9 @@ public class Constructors_1 {
         //A constructor is a special method that is run when a 'Constructors_1' object instance is created.
         //A constructor has no void in its method, and also has the same name as the class itself.
 
+        //Every time you create an object, a constructor of some sort is run. You have to run a constructor to create
+        //an object.
+
         this("Alex", 43);
         //The above "this" is calling the second constructor below. Therefore constructors can call other constructors
         //As well as being used for instance variables (e.g. this.name), "this" is also used for constructors.

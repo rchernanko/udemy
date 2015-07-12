@@ -18,7 +18,7 @@ If you go to that class, you'll see it is implemented by many different things, 
 
  */
 
-package arraylists;
+package collections_framework_arraylists;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

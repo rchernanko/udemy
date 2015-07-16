@@ -11,6 +11,10 @@ public class Sets {
 
         //A Set (an interface) is a kind of collection that stores unique elements only.
 
+        //Used less often than lists or maps, sets are nevertheless great for creating collections of things that are
+        //unique --- in other words, for removing duplicates. It's also very quick to check whether a value exists in
+        //a set, whereas checking for something in a list can take a long time in computer terms.
+
         //As with maps and lists, there are several types of Sets you can use. In this tutorial, we will look at:
         //Hashsets, LinkedHashSets and TreeSets.
 

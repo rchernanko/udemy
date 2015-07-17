@@ -34,8 +34,8 @@ public class Sets {
 
         //When I print out the above, as with HashMaps, the elements are printed in any order. Can be random.
 
-        //Note that the Set implementations inherit toString from AbstractCollection. The Set elements are output as
-        //a string list separated by commas.
+        //Note that the Set classes (i.e. ones that implement from 'Set') inherit the toString method from
+        //AbstractCollection. The Set elements are output as a string list separated by commas.
 
         //So at the top of this class, we mentioned that a Set stores unique elements only.
         //So let's see what happens when I try to add a duplicate e.g. "Mouse" to set1
@@ -48,7 +48,7 @@ public class Sets {
 
         //So unlike a List, Sets only contain unique items.
 
-        //Sets are really good at sorting out the duplicates from a list of elements!
+        //One good use of Sets - sorting out the duplicates from a list of elements!
 
         //So now let's look at another type of Set...
 
@@ -117,7 +117,61 @@ public class Sets {
             System.out.println("Set 4 is still empty after adding items");
         }
 
-        //Up to 7 mins 45 seconds left
+        //There are some other really useful methods from Set. Have a look at the interface for more info (and use the
+        //Java API documentation online)
+
+        /////// But some key ones to have a look at in this tutorial ////////
+
+
+
+        ////// Intersection ////////
+
+
+
+        //I'll start by creating 2 new sets + adding some elements to them
+
+        Set<String> newSet = new TreeSet<String>();
+        Set<String> newSet2 = new TreeSet<String>();
+
+        newSet.add("Richard");
+        newSet.add("James");
+        newSet.add("Scott");
+        newSet.add("Amit");
+        newSet.add("David");
+
+        //For newSet2, I'm going to add a couple of elements that are in newSet and some that are unique to newSet2:
+
+        newSet2.add("Richard");
+        newSet2.add("James");
+        newSet2.add("Bernard");
+        newSet2.add("Travis");
+        newSet2.add("Marc");
+
+        //If I want to find out which elements are common to both sets, the first step is to create a copy of one of
+        //my sets (so that I don't mess up the original!)
+
+        //To do this, I create a new Set (as below) and then pass the 'newSet' reference variable into HashSet's
+        //constructor
+
+        Set<String> intersectionSet = new HashSet<String>(newSet);
+
+        //The above is really good to know!!!! Perhaps read up more on this :-)
+
+
+        //UP to 3 mins 30 seconds remaining - started typing the below anyway
+
+
+
+
+        //The below prints out my copy of newSet:
+        System.out.println(intersectionSet);
+
+        intersectionSet.retainAll(newSet2);
+
+        System.out.println(intersectionSet);
+
+
+
 
 
 

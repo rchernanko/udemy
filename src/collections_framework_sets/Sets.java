@@ -82,12 +82,11 @@ public class Sets {
 
         System.out.println("TreeSets sort the elements into their 'natural order' : " + set3);
 
-
         //////// Common Operations with Sets ////////
 
         //1) Iteration through a Set
 
-        for(String element : set1) {
+        for (String element : set1) {
             System.out.println(element);
         }
 
@@ -95,10 +94,10 @@ public class Sets {
         //Unlike with a List where you have to search through all the items in the list, sets are optimised to find
         //particular elements quickly
 
-        if(set3.contains("Belgium")) {
+        if (set3.contains("Belgium")) {
             System.out.println("Belgium present");
         }
-        if(set3.contains("Italy")) {
+        if (set3.contains("Italy")) {
             System.out.println("Contains Italy");
         }
 
@@ -106,14 +105,14 @@ public class Sets {
 
         Set<String> set4 = new TreeSet<String>();
 
-        if(set4.isEmpty()) {
+        if (set4.isEmpty()) {
             System.out.println("Set 4 is empty at start");
         }
 
         set4.add("Potato");
         set4.add("Carrot");
 
-        if(set4.isEmpty()) {
+        if (set4.isEmpty()) {
             System.out.println("Set 4 is still empty after adding items");
         }
 
@@ -122,11 +121,7 @@ public class Sets {
 
         /////// But some key ones to have a look at in this tutorial ////////
 
-
-
         ////// Intersection ////////
-
-
 
         //I'll start by creating 2 new sets + adding some elements to them
 
@@ -147,7 +142,7 @@ public class Sets {
         newSet2.add("Travis");
         newSet2.add("Marc");
 
-        //If I want to find out which elements are common to both sets, the first step is to create a copy of one of
+        //If I now want to find out which elements are common to both sets, the first step is to create a copy of one of
         //my sets (so that I don't mess up the original!)
 
         //To do this, I create a new Set (as below) and then pass the 'newSet' reference variable into HashSet's
@@ -157,24 +152,62 @@ public class Sets {
 
         //The above is really good to know!!!! Perhaps read up more on this :-)
 
+        //So let's just print out the contents of the intersectionSet to make sure I have a copy:
 
-        //UP to 3 mins 30 seconds remaining - started typing the below anyway
+        System.out.println("My intersection set : " + intersectionSet);
 
-
-
-
-        //The below prints out my copy of newSet:
-        System.out.println(intersectionSet);
+        //What I now want to do is to find out which elements are in intersectionSet that are only in newSet2. And so I
+        //do this...
 
         intersectionSet.retainAll(newSet2);
 
-        System.out.println(intersectionSet);
+        //This can read as 'retain all of the elements in the intersectionSet that are ALSO in the newSet2'
+
+        //And now let's print out the updated list of elements:
+
+        System.out.println("After I call the retainAll method, my intersectionSet reads : " + intersectionSet
+                + " . These elements are common in the intersectionSet and newSet2");
 
 
 
 
 
+        /////// Find the difference between 2 sets ////////
 
+
+        //I want to find the elements that are in countrySet1 that are not in countrySet2
+
+        //Let's first create 2 sets again
+
+        Set<String> countrySet1 = new TreeSet<String>();
+        Set<String> countrySet2 = new TreeSet<String>();
+
+        countrySet1.add("Italy");
+        countrySet1.add("England");
+        countrySet1.add("Spain");
+        countrySet1.add("France");
+        countrySet1.add("Germany");
+
+        //For countrySet2, I'm going to add a couple of elements that are in countrySet1 and some that are unique to
+        //countrySet2:
+
+        countrySet2.add("Italy");
+        countrySet2.add("England");
+        countrySet2.add("Colombia");
+        countrySet2.add("America");
+        countrySet2.add("Peru");
+
+        //Next, let's make a copy of countrySet1:
+
+        Set<String> differenceSet = new HashSet<String>(countrySet1);
+
+        differenceSet.removeAll(countrySet2);
+
+        //The differenceSet is going to start off as being a copy of countrySet1, and then I'm going to remove all
+        //of the elements that are also in countrySet2. So I am basically finding the unique elements of countrySet1,
+        //those that ARE NOT in countrySet2.
+
+        System.out.println("The unique elements of countrySet1 that are not in countrySet2 are : " + differenceSet);
 
     }
 

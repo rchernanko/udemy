@@ -51,8 +51,11 @@ public class App {
 
         System.out.println(set);
 
-        //Remember - I don't have to iterate through the entire set (using a for loop) to print its values. I can
-        //simply invoke the toString method within Sets and print out the set reference in a sout (as above).
+        //Remember - I don't have to iterate through the entire set (using a for loop) to print its values.
+
+        //Why? Because LinkedHashSet extends HashSet, which extends AbstractSet, which extends AbstractCollection.
+        //AND in the AbstractCollection class, there is a toString method that is invoked when I try to print out a
+        //reference to a LinkedHashSet (and other Sets too) - as demonstrated above
 
         //When I print out the above set, there is only one Cat - no duplicate values.
 

@@ -6,6 +6,8 @@ This tutorial looks at how to sort lists using Comparators.
 
 package collections_framework_sorting_lists;
 
+import com.javafx.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,7 +24,6 @@ public class App {
 
         //////////// SORTING A LIST OF STRINGS INTO NATURAL ORDER /////////////
 
-
         List<String> animals = new ArrayList<String>();
 
         animals.add("snake");
@@ -36,9 +37,11 @@ public class App {
 
         Collections.sort(animals);
 
+        System.out.println("Sorting list of Strings into natural order: ");
         for(String animal : animals) {
             System.out.println(animal);
         }
+        System.out.println();
 
         //So when I do the above sout, the animals in my list are printed in alphabetical order :)
 
@@ -66,9 +69,11 @@ public class App {
 
         Collections.sort(numbers);
 
+        System.out.println("Sorting list of Integers into natural order: ");
         for(Integer number : numbers) {
             System.out.println(number);
         }
+        System.out.println();
 
         //When I print out the above, the Integers are sorted into their 'natural order' (as is the List of Strings).
         //Note that we will be looking at natural order in a bit more detail in the next tutorial.
@@ -115,9 +120,11 @@ public class App {
 
         //So the list should now be sorted in length of string. So let's see that in a sout!
 
+        System.out.println("Sorting a list of Strings into order as per their string length (using Comparator):");
         for (String footballClub : footballClubs) {
             System.out.println(footballClub);
         }
+        System.out.println();
 
 
 
@@ -134,23 +141,61 @@ public class App {
 
         Collections.sort(footballClubs, new AlphabeticalOrderComparator());
 
+        System.out.println("Sorting a list of Strings into alphabetical order (using Comparator):");
         for (String footballClub : footballClubs) {
             System.out.println(footballClub);
         }
+        System.out.println();
+
+        //And how to make it sort into reverse alphabetical order?
+        //To demonstrate, I will create a ReverseAlphabeticalComparator class outside this current class (see below)
+
+        //And then I will call it below:
+
+        Collections.sort(footballClubs, new ReverseAlphabeticalComparator());
+
+        System.out.println("Sorting a list of Strings into reverse alphabetical order (using Comparator):");
+        for(String footballClub : footballClubs) {
+            System.out.println(footballClub);
+        }
+        System.out.println();
 
 
 
 
+        ///////// SORTING LIST OF INTEGERS USING ANONYMOUS CLASSES //////////
 
 
-        //UP TO 12 mins 20 seconds remaining (starting at 11.55 mins remaining)
+        List<Integer> angles = new ArrayList<Integer>();
+
+        angles.add(28);
+        angles.add(85);
+        angles.add(14);
+        angles.add(18);
+        angles.add(5);
+        angles.add(293);
+
+        //And below, I am using an anonymous class to sort my list of integers into an order I want:
+
+        Collections.sort(angles, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer num1, Integer num2) {
+                return 0;
+            }
+        }
+
+        for(Integer angle : angles) {
+            System.out.println(angle);
+        }
+
+        //UP TO 9 mins 32 seconds left (start from 9 mins 45). Need to tidy up the above
+
+
+
+
 
 
     }
-
-
-
-
 
 }
 
@@ -189,14 +234,30 @@ class StringLengthComparator implements Comparator<String> {
 
 class AlphabeticalOrderComparator implements Comparator<String> {
 
-    //Ok...but how can I compare 2 strings?
+    //Ok...but how can I compare 2 strings? I can't do this by using the .length method of course...
     //What I want to do is - if an string is alphabetically higher than another string, return 1 (i.e make it come
-    //later in the list) - I can't do this by using the .length method of course...
+    //later in the list)
 
     //So, the way I can compare 2 strings alphabetically is by using a method of String called compareTo, as below:
 
     @Override
     public int compare(String s1, String s2) {
         return s1.compareTo(s2);
+    }
+    //The above is returning 1 IF s1 is greater than s2 (i.e. if s1 sorts alphabetically later than s2)
+    //It returns -1 IF s1 is less than s2 (i.e. if s1 sorts alphabetically earlier than s2)
+    //And it returns 0 if s1 and s2 are equal
+
+    //compareTo is a method of the Comparable interface - we will be looking at this in more detail in the next tutorial
+}
+
+class ReverseAlphabeticalComparator implements Comparator<String> {
+
+    //If I want to sort my list of strings into reverse alphabetical order, all I have do is add a 'negative' sign
+    //before s1 in the return statement:
+
+    @Override
+    public int compare(String s1, String s2) {
+        return -s1.compareTo(s2);
     }
 }

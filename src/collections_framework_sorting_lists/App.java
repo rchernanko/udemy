@@ -6,8 +6,6 @@ This tutorial looks at how to sort lists using Comparators.
 
 package collections_framework_sorting_lists;
 
-import com.javafx.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -81,7 +79,7 @@ public class App {
 
 
 
-        //////////// SORTING A LIST INTO SOMETHING OTHER THAN ITS NATURAL ORDER /////////////
+        //////////// SORTING A LIST OF STRINGS / INTEGERS INTO SOMETHING OTHER THAN ITS NATURAL ORDER /////////////
 
 
 
@@ -166,6 +164,7 @@ public class App {
         ///////// SORTING LIST OF INTEGERS USING ANONYMOUS CLASSES //////////
 
 
+
         List<Integer> angles = new ArrayList<Integer>();
 
         angles.add(28);
@@ -175,22 +174,55 @@ public class App {
         angles.add(5);
         angles.add(293);
 
-        //And below, I am using an anonymous class to sort my list of integers into an order I want:
+        //And below, I am using an anonymous class to sort my list of integers into an order I want.
+        //Again, I am using the compareTo method of the Comparable interface:
 
         Collections.sort(angles, new Comparator<Integer>() {
             @Override
             public int compare(Integer num1, Integer num2) {
-                return 0;
+                return num1.compareTo(num2);
+                //return 1 if num1 should come later in the list than num2 (i.e. it has higher numerical value)
+                //Of course, if I wanted to sort the Integers into reverse order I can write:
+                //'return -num1.compareTo(num2)'
             }
-        }
+        });
 
+        System.out.println("Sorting a list of Integers using an anonymous Comparator interface: ");
         for(Integer angle : angles) {
             System.out.println(angle);
         }
+        System.out.println();
 
-        //UP TO 9 mins 32 seconds left (start from 9 mins 45). Need to tidy up the above
 
 
+
+    ///////// SORTING ARBITRARY OBJECTS //////////
+
+
+
+
+    //First thing to do - I will create a Person class below. This will have some instance variables, a constructor,
+    //getters and setters, and a toString method (so that we can check the order in which we are sorting Person objects
+    //is correct - we will be sorting by the name variable):
+
+    List<Person> people = new ArrayList<Person>();
+
+        people.add(new Person(2, "Richard"));
+        people.add(new Person(1, "Matilda"));
+        people.add(new Person(34, "Stuart"));
+        people.add(new Person(32, "Alice"));
+
+        //Before we sort them, let's just check that the order in which these will be sorted is as per the order
+        //in which I've added them to the people list:
+
+        System.out.println("Printing out a list of Person objects before they are sorted: ");
+        for(Person person: people) {
+            System.out.println(person);
+        }
+
+
+
+        //UP TO 4 mins and 51 seconds remaining
 
 
 
@@ -260,4 +292,36 @@ class ReverseAlphabeticalComparator implements Comparator<String> {
     public int compare(String s1, String s2) {
         return -s1.compareTo(s2);
     }
+}
+
+class Person {
+
+    private int id;
+    private String name;
+
+    public Person(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return name;
+    }
+
 }

@@ -20,7 +20,11 @@ public class App {
 
 
 
+
         //////////// SORTING A LIST OF STRINGS INTO NATURAL ORDER /////////////
+
+
+
 
         List<String> animals = new ArrayList<String>();
 
@@ -36,13 +40,12 @@ public class App {
         Collections.sort(animals);
 
         System.out.println("Sorting list of Strings into natural order: ");
-        for(String animal : animals) {
+        for (String animal : animals) {
             System.out.println(animal);
         }
         System.out.println();
 
         //So when I do the above sout, the animals in my list are printed in alphabetical order :)
-
 
 
 
@@ -68,7 +71,7 @@ public class App {
         Collections.sort(numbers);
 
         System.out.println("Sorting list of Integers into natural order: ");
-        for(Integer number : numbers) {
+        for (Integer number : numbers) {
             System.out.println(number);
         }
         System.out.println();
@@ -84,6 +87,7 @@ public class App {
 
 
 
+
         //BUT....
 
         //What if I want to sort my list in something other than natural order...?
@@ -93,7 +97,9 @@ public class App {
 
 
 
+
         //////////// SORTING A LIST OF STRINGS INTO ORDER OF STRING LENGTH /////////////
+
 
 
 
@@ -126,7 +132,10 @@ public class App {
 
 
 
+
+
         //////////// SORTING A LIST OF STRINGS INTO REVERSE ALPHABETICAL ORDER /////////////
+
 
 
 
@@ -153,7 +162,7 @@ public class App {
         Collections.sort(footballClubs, new ReverseAlphabeticalComparator());
 
         System.out.println("Sorting a list of Strings into reverse alphabetical order (using Comparator):");
-        for(String footballClub : footballClubs) {
+        for (String footballClub : footballClubs) {
             System.out.println(footballClub);
         }
         System.out.println();
@@ -161,7 +170,10 @@ public class App {
 
 
 
+
         ///////// SORTING LIST OF INTEGERS USING ANONYMOUS CLASSES //////////
+
+
 
 
 
@@ -188,7 +200,7 @@ public class App {
         });
 
         System.out.println("Sorting a list of Integers using an anonymous Comparator interface: ");
-        for(Integer angle : angles) {
+        for (Integer angle : angles) {
             System.out.println(angle);
         }
         System.out.println();
@@ -196,16 +208,17 @@ public class App {
 
 
 
-    ///////// SORTING ARBITRARY OBJECTS //////////
+        ///////// SORTING ARBITRARY OBJECTS //////////
 
 
 
 
-    //First thing to do - I will create a Person class below. This will have some instance variables, a constructor,
-    //getters and setters, and a toString method (so that we can check the order in which we are sorting Person objects
-    //is correct - we will be sorting by the name variable):
 
-    List<Person> people = new ArrayList<Person>();
+        //First thing to do - I will create a Person class below. This will have some instance variables, a constructor,
+        //getters and setters, and a toString method (so that we can check the order in which we are sorting Person
+        //objects is correct - we will be sorting by the name variable):
+
+        List<Person> people = new ArrayList<Person>();
 
         people.add(new Person(2, "Richard"));
         people.add(new Person(1, "Matilda"));
@@ -213,19 +226,51 @@ public class App {
         people.add(new Person(32, "Alice"));
 
         //Before we sort them, let's just check that the order in which these will be sorted is as per the order
-        //in which I've added them to the people list:
+        //in which I've added them to the people list - of course when I try to print out a Person object, I will be
+        //invoking the toString method in Person:
 
         System.out.println("Printing out a list of Person objects before they are sorted: ");
-        for(Person person: people) {
+        for (Person person : people) {
             System.out.println(person);
         }
+        System.out.println();
 
+        //And now I want to sort my Person objects into order as per their id:
 
+        Collections.sort(people, new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
 
-        //UP TO 4 mins and 51 seconds remaining
+                if (p1.getId() > p2.getId()) {
+                    return 1;
+                } else if (p1.getId() < p2.getId()) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
 
+        System.out.println("Printing out a list of Person objects after they've been sorted in order of their ID : ");
+        for (Person person : people) {
+            System.out.println(person);
+        }
+        System.out.println();
 
+        //And I could also sort my Person objects into order as per their name (using compareTo method, which is
+        //implemented by both Integer and String, and is a method within the Comparable interface):
 
+        Collections.sort(people, new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.getName().compareTo(p2.getName());
+            }
+        });
+
+        System.out.println("Printing out a list of Person objects after they've been sorted in order of their name : ");
+        for (Person person : people) {
+            System.out.println(person);
+        }
+        System.out.println();
 
     }
 
@@ -321,7 +366,7 @@ class Person {
     }
 
     public String toString() {
-        return name;
+        return id + " : " + name;
     }
 
 }

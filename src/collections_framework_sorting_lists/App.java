@@ -257,7 +257,9 @@ public class App {
         System.out.println();
 
         //And I could also sort my Person objects into order as per their name (using compareTo method, which is
-        //implemented by both Integer and String, and is a method within the Comparable interface):
+        //implemented by both Integer and String, and is a method within the Comparable interface).
+        //NOTE - I don't think I can use the compareTo method on primitive 'ints' - hence why I can't use it when
+        //sorting by Person ids:
 
         Collections.sort(people, new Comparator<Person>() {
             @Override

@@ -2,9 +2,9 @@
 
 Start with this class and then go to DefineYourOwnNaturalOrder class (for part 2).
 
-In this tutorial, we're going to look at natural order in the context of sorting arrays and in TreeSets - note that the
-theory we will discuss also applies to sorting the key values of TreeMaps into natural order, but we won't be looking
-at this specifically in this tutorial).
+In this tutorial, we're going to look at natural order in the context of sorting arrays and sorting TreeSets - note
+that the theory we will discuss also applies to sorting the key values of TreeMaps into natural order, but we won't be
+looking at this specifically in this tutorial.
 
 And we will also look at how you define the natural order for your own classes (see DefineYourOwnNaturalOrder)
 
@@ -61,7 +61,6 @@ public class App {
 
     //Because both List and Set extend the Collection class, I can use it here (and pass in my List and Set).
     //Polymorphism in full flow:
-
     public static void addElements(Collection<String> col) {
         col.add("Richard");
         col.add("Sue");
@@ -74,6 +73,5 @@ public class App {
         for (String element : col) {
             System.out.println(element);
         }
-
     }
 }

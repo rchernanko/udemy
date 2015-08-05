@@ -9,7 +9,8 @@ This tutorial will explore how to define the natural order for your own custom o
 
 package collections_framework_natural_order;
 
-//1) First thing's first, let's create my own custom object - 1 variable, 1 constructor and a toString method:
+//1) First thing's first, let's create my own custom object - 1 variable, 1 constructor and a toString method (Person)
+//See below - ignore everything else for now:
 
 import java.util.*;
 
@@ -39,8 +40,10 @@ class Person implements Comparable<Person> {
 
         //5) The idea is that:
 
-        //You want to return -1 if this.person is less than p1 (that you feed into the compareTo method)
-        //You want to return 1 if this.person is greater than p1 (that you feed into the compareTo method)
+        //You want to return -1 if this.person is less than p1 (that you feed into the compareTo method) - i.e. sort p1
+        //LATER than this.person
+        //You want to return 1 if this.person is greater than p1 (that you feed into the compareTo method) - i.e. sort
+        //this.person LATER than p1
         //You want to return 0 if this.person and p1 are equal
 
         //But before we fill in the body for the compareTo method, I will do something else.
@@ -49,22 +52,25 @@ class Person implements Comparable<Person> {
         //information.
 
         //In a nutshell, if I want to add a custom-made object as a 'key' in a map, or as a 'value' in a
-        //set, then I need to implement the equals and hashcode methods so that I am only adding 'unique' values to
-        //the maps and sets (i.e. hashcode and equals stops duplicates from being added, and exceptions from being
-        //thrown).
+        //set, then I need to...
 
-        //So let's do that now (see below).
+        //a) implement the equals and hashcode methods so that I am only adding 'unique' values to
+        //the maps and sets (i.e. hashcode and equals stops duplicates from being added, and exceptions from being
+        //thrown)
+        //b) ensure it implements Comparable
+        //c) Fill in its (the class's) compareTo method.
+
+        //So let's complete the definition of the compareTo method now (see below).
 
         //7) Right so now let's implement the body (just a return method) within the compareTo method:
-        //We will make the Person objects sort by alphabetical order (by their name). And the easiest way to compare
-        //2 Strings into alphabetical order is to use the 'compareTo' method of Strings:
+        //We will make the Person objects sort by alphabetical order (by the field 'name'). And the easiest way to
+        //sort/compare two Strings in alphabetical order is to use the 'compareTo' method of Strings:
 
         return name.compareTo(p1.name);
 
         //8) And now that the above is implemented, I am now free to add Person objects to TreeSets (because their
         //natural order is now defined), and I can also call the Collections.sort method and pass in my list, and this
         //will also sort my Person objects in their natural order (which is alphabetical). Go to point 9.
-
 
         //FYI - If I wanted to sort by reverse alphabetical order, my return would be:
         //return -name.compareTo(p1.name);
@@ -114,7 +120,7 @@ public class DefineYourOwnNaturalOrder {
         System.out.println();
         showElements(peopleSet);
 
-        //3) Before I add ANY natural order to the Person object, when I try to run addElements and then showElements,
+        //3) Before I define the natural order to the Person object, when I try to run addElements and then showElements,
         //an exception is thrown:
 
         //Exception in thread "main" java.lang.ClassCastException: collections_framework_natural_order.Person cannot
@@ -125,7 +131,7 @@ public class DefineYourOwnNaturalOrder {
         //natural order defined (we will do that next), the TreeSet throws a hissy fit.
 
         //So let's fix that now - let's define the natural order for our Person class (go back to the Person class where
-        //we will add 'implements Comparable' - then see my notes up there for more detail.
+        //we will add 'implements Comparable' - then see my notes up there for more detail - point 4).
 
     }
 

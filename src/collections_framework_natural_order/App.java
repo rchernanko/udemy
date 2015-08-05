@@ -1,6 +1,7 @@
 /*
 
-Start with this class and then go to DefineYourOwnNaturalOrder class (for part 2).
+Start with this class and then go to DefineYourOwnNaturalOrder class (for part 2), and then class NextExample (for part
+3)
 
 In this tutorial, we're going to look at natural order in the context of sorting arrays and sorting TreeSets - note
 that the theory we will discuss also applies to sorting the key values of TreeMaps into natural order, but we won't be

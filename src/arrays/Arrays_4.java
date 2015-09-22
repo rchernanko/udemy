@@ -6,8 +6,8 @@ public class Arrays_4 {
 
         int[] costs = {2, 5, 8, 10};
 
-        for(int prices : costs){
-            System.out.println(prices);
+        for(int cost : costs){
+            System.out.println(cost);
         }
     }
 }

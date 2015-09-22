@@ -4,19 +4,20 @@ public class Arrays_3 {
 
     public static void main(String[] args) {
 
-        String[] city = new String[3];
+        String[] cities = new String[3];
 
-        city[0] = "London";
-        city[1] = "Manchester";
-        city[2] = "New York";
+        cities[0] = "London";
+        cities[1] = "Manchester";
+        cities[2] = "New York";
 
-        System.out.println(city[2]);
+        System.out.println(cities[2]);
 
-        for(String favouritePlace : city){
-            System.out.println(favouritePlace);
+        for(String city : cities){
+            System.out.println(city);
 
-        //The above. When you use a :, you declare a string reference for each value in the array 'city'.
-        //So if I run this class now with 'sout' (favouritePlace), all values will be printed
+        //The above. When you use a :, you declare a string reference for each value in the array 'cities'.
+        //So if I run this class now with 'sout', all values will be printed
+        //You can read the above as 'for each city in the array cities, print out the city'
         }
 
     }

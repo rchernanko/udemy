@@ -8,7 +8,8 @@ public class Classes_3 {
 
     void describeCarDetails() {
         for (int i = 0; i < 3; i++) {
-            System.out.println("This car is a " + carName + ". Its registration is " + carRegistration + " and it is " + carAge + " years old");
+            System.out.println("This car is a " + carName + ". Its registration is " + carRegistration + " and " +
+                    "it is " + carAge + " years old");
         }
     }
 

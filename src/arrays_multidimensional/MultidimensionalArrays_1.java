@@ -15,8 +15,8 @@ public class MultidimensionalArrays_1 {
         System.out.println(grid[0][1]);
 
         String[][] names = new String[2][4];
-        //think of the first value as the number of rows (or many arrays there are)
-        //think of the second value as the number of columns (or how long the arrays are)
+        //think of the first value as how many arrays there will be
+        //think of the second value as how long each array will be
 
         //From QA notes, the syntax of a multidimensional 2D array is : array_identifier = new type [number_of_arrays] [length];
 

@@ -91,7 +91,7 @@ class App {
 
         System.out.println("Using the .equals method, the answer is : " + person3.equals(person4));
 
-        //(The below is true BEFORE I add the equals method to the Person class)......
+        //(The below description is true BEFORE I add the equals method to the Person class)......
         //Shock horror! When I actually run the above, the answer is still in fact false.....why????
         //The reason for this is that I am yet to have told the .equals method how to compare the 2 objects.
 

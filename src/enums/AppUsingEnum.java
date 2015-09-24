@@ -64,7 +64,7 @@ public class AppUsingEnum {
 
         //E.g. A car is an instance of cars (in general), which is an instance of a Machine
 
-        //Let's got back to the Animal enum class + look at what else we can do with enums, starting with giving it a
+        //Let's go back to the Animal enum class + look at what else we can do with enums, starting with giving it a
         //constructor and even some methods!
 
         //I have created a getter method in my enum called getName, so let's now call that

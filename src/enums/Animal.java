@@ -1,3 +1,9 @@
+/*
+
+Read AppWithoutUsingEnum first - that is my starting point
+
+ */
+
 package enums;
 
 public enum Animal {
@@ -6,10 +12,10 @@ public enum Animal {
     //You might wonder what cat, dog and mouse are...
     //Well, they are actually objects + they are of the type Animal
     //Is really important to know that CAT, DOG and MOUSE are not Strings, they are special objects (enum constants)
-    //But I can turn them into a String using the enum name method (see AppUsingEnum.java).
+    //But I can turn them into a String using the enum .name method (see AppUsingEnum.java).
     //Please ignore the names in brackets, these are explained later on (in the notes below)
 
-    //To show this, go back to AppUsingEnum and look at the sout (Animal.DOG.getClass());
+    //To show that they are objects of the type Animal, go back to AppUsingEnum and look at the sout (Animal.DOG.getClass());
 
     //Come back
 

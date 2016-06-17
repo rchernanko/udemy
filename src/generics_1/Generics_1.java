@@ -2,7 +2,7 @@ package generics_1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import inheritance.Inheritance_Animal;
+import lesson15_inheritance.Inheritance_Animal;
 
 public class Generics_1 {
 

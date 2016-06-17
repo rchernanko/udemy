@@ -1,4 +1,4 @@
-package upcasting_and_downcasting_variable_types_2;
+package lesson22_upcasting_and_downcasting_variable_types_2;
 
 public class App {
 

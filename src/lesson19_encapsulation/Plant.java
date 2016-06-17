@@ -1,4 +1,4 @@
-package encapsulation;
+package lesson19_encapsulation;
 
 public class Plant {
 

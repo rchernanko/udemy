@@ -1,4 +1,4 @@
-package polymorphism;
+package lesson18_polymorphism;
 
 public class App {
 

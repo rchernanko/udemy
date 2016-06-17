@@ -1,4 +1,4 @@
-package upcasting_and_downcasting_variable_types;
+package lesson21_upcasting_and_downcasting_variable_types;
 
 
 class Machine {

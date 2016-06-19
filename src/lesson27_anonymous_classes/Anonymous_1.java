@@ -12,7 +12,7 @@ John says it is often quite useful
 */
 
 
-package anonymous_classes;
+package lesson27_anonymous_classes;
 
 class Machine {
     public void start() {
@@ -60,7 +60,8 @@ public class Anonymous_1 {
 
         Plant plant1 = new Plant() {
             @Override
-            //Override annotation is not really necessary for an interface (doesn't really make sense), but it's fine to leave in
+            //Override annotation is not really necessary for an interface (doesn't really make sense),
+            //but it's fine to leave in
             public void grow() {
                 System.out.println("Plant growing");
             }

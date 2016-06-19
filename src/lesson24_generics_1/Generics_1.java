@@ -1,4 +1,4 @@
-package generics_1;
+package lesson24_generics_1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ public class Generics_1 {
     //from the class)
 
     //A simple example is as below, using the ArrayList class - John says that this is a key class to learn
-    //There are more ArrayList tutorials later on in the java beginners udemy coursr
+    //There are more ArrayList tutorials later on in the java beginners udemy course
 
     //Below shows the old style of doing generics (before Java 5) + the new style (after Java 5)
 

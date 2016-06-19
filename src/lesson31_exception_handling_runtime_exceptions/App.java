@@ -1,4 +1,4 @@
-package exception_handling_runtime_exceptions;
+package lesson31_exception_handling_runtime_exceptions;
 
 public class App {
 

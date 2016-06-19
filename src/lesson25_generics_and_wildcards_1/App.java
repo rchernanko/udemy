@@ -1,4 +1,4 @@
-package generics_and_wildcards_1;
+package lesson25_generics_and_wildcards_1;
 
 import java.util.ArrayList;
 

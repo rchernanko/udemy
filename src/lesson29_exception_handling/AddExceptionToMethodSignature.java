@@ -1,4 +1,4 @@
-package exception_handling;
+package lesson29_exception_handling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -34,11 +34,12 @@ public class AddExceptionToMethodSignature {
         //If I choose to implement the first option, "throws FileNotFoundException" is added to my method signature, and
         //the error lines underneath "new FileReader(file);" disappear (see above).
 
-        //If I were to run this class now, my 'stack trace' in the console would be red and show an error (because there is no text.txt in my project)
+        //If I were to run this class now, my 'stack trace' in the console would be red and show an error (because
+        //there is no text.txt in my project)
 
-        //FYI - Note that at present, the above will not throw an error because there is a file named "exception_handing_test.txt"
-        //actually present in my Udemy project. However, if I were to delete / rename the file, the FileNotFoundException
-        //would be thrown.
+        //FYI - Note that at present, the above will not throw an error because there is a file
+        //named "exception_handing_test.txt" actually present in my Udemy project. However, if I were to
+        //delete / rename the file, the FileNotFoundException would be thrown.
 
         //In the stack trace, the line at the very top will tell you why your error occurred. In this instance:
         //"Exception in thread "main" java.io.FileNotFoundException: exception_handing_test.txt (No such file or directory)"
@@ -49,8 +50,9 @@ public class AddExceptionToMethodSignature {
         //So the fact that I've added "throw" to my method signature allows me to highlight why and where the exception occurred.
 
         //Basically the line "FileReader fr = new FileReader();" encounters an error and reacts by "throwing" an
-        //Exception object out of itself - in this case, it's thrown an Exception out of the main method (as you can see in the stack trace)
-        //This "throwing" was possible because of the "throws FileNotFoundException" in the method signature
+        //Exception object out of itself - in this case, it's thrown an Exception out of the main method (as you
+        //can see in the stack trace). This "throwing" was possible because of the "throws FileNotFoundException"
+        //in the method signature
 
     }
 }

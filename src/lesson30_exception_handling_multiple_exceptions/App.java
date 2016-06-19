@@ -4,7 +4,7 @@ Please read the Test.java class first
 
  */
 
-package exception_handling_multiple_exceptions;
+package lesson30_exception_handling_multiple_exceptions;
 
 public class App {
 

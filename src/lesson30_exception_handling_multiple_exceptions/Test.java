@@ -4,7 +4,7 @@ This tutorial looks at how to throw multiple exceptions from a method and also h
 
  */
 
-package exception_handling_multiple_exceptions;
+package lesson30_exception_handling_multiple_exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package generics_and_wildcards_2;
+package lesson26_generics_and_wildcards_2;
 
 public class Machine {
 

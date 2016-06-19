@@ -7,7 +7,7 @@
 
 //This class attempts the second option
 
-package exception_handling;
+package lesson29_exception_handling;
 
 import java.io.File;
 import java.io.FileNotFoundException;

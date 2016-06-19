@@ -4,7 +4,7 @@ Read AppWithoutUsingEnum first - that is my starting point
 
  */
 
-package enums;
+package lesson38_enums;
 
 public enum Animal {
     CAT("Penny"), DOG("Bailey"), MOUSE("Jerry");

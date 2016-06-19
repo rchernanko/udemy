@@ -10,7 +10,7 @@ it's really tricky to read, and doesn't look that nice.
 
  */
 
-package reading_files_with_try_with_resources;
+package lesson34_reading_files_with_try_with_resources;
 
 import java.io.*;
 
@@ -23,7 +23,7 @@ public class App {
 
         //When using the Java 7-introduced "try with resources" feature, the close method on BufferedReader is
         //automatically called, and we do not need to write br.close (as we did in the reading files within the
-        //'reading_files_with_filereader' package classes).
+        //'lesson33_reading_files_with_filereader' package classes).
 
         //So any class that implements Autoclosable (and therefore has a close method), will automatically execute that
         //close method at the end of the "try with resources"
@@ -50,7 +50,7 @@ public class App {
             System.out.println("Unable to read file : " + file.toString());
         }
 
-        //So if you compare this code above to the blob of code in the 'reading_files_with_filereader' class, you will
+        //So if you compare this code above to the blob of code in the 'lesson33_reading_files_with_filereader' class, you will
         //see that this is much more readable + easier to maintain and understand :-)
 
         //I've also created another class in this package called Temp to illustrate that the close method will be

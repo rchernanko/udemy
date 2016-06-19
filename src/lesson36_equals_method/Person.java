@@ -1,4 +1,4 @@
-package equals_method;
+package lesson36_equals_method;
 
 //First thing I've done is to create a Person blueprint with some variables, a constructor and a toString method.
 //I generated the toString using right-click and generate sources.

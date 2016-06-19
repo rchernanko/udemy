@@ -1,4 +1,4 @@
-package inner_classes;
+package lesson37_inner_classes;
 
 public class Robot {
 

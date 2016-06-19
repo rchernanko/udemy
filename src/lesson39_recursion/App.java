@@ -1,4 +1,4 @@
-package recursion;
+package lesson39_recursion;
 
 public class App {
 

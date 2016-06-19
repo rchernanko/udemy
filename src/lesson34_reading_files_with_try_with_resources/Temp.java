@@ -1,4 +1,4 @@
-package reading_files_with_try_with_resources;
+package lesson34_reading_files_with_try_with_resources;
 
 public class Temp implements AutoCloseable {
 

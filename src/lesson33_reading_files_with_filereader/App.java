@@ -9,7 +9,7 @@ can be read.
 
  */
 
-package reading_files_with_filereader;
+package lesson33_reading_files_with_filereader;
 
 import java.io.*;
 

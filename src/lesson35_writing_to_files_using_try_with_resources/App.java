@@ -9,7 +9,7 @@ Pretty straightforward stuff
 
  */
 
-package writing_to_files_using_try_with_resources;
+package lesson35_writing_to_files_using_try_with_resources;
 
 import java.io.BufferedWriter;
 import java.io.File;

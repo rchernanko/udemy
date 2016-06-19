@@ -10,7 +10,7 @@ Next look at the comments in the Machine class (at the top)
 
  */
 
-package abstract_classes;
+package lesson32_abstract_classes;
 
 public class App {
 

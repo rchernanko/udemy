@@ -1,4 +1,4 @@
-package enums;
+package lesson38_enums;
 
 public class AppUsingEnum {
 
@@ -41,7 +41,7 @@ public class AppUsingEnum {
 
         //Enums are considered 'type-safe' because they restrict values that can be used
 
-        //And that's about 90% of what you do with enums...pretty straightforward.
+        //And that's about 90% of what you do with lesson38_enums...pretty straightforward.
 
         //But let's now go back to the Animal.java (enum) class and look at some other things you can do with Enums.
 
@@ -64,7 +64,7 @@ public class AppUsingEnum {
 
         //E.g. A car is an instance of cars (in general), which is an instance of a Machine
 
-        //Let's go back to the Animal enum class + look at what else we can do with enums, starting with giving it a
+        //Let's go back to the Animal enum class + look at what else we can do with lesson38_enums, starting with giving it a
         //constructor and even some methods!
 
         //I have created a getter method in my enum called getName, so let's now call that

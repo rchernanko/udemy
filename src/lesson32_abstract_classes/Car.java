@@ -1,4 +1,4 @@
-package abstract_classes;
+package lesson32_abstract_classes;
 
 public class Car extends Machine {
 

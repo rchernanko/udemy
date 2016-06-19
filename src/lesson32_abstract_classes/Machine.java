@@ -15,7 +15,7 @@ Next comment is after "car1.setId(7);" in the App.java class
 
 */
 
-package abstract_classes;
+package lesson32_abstract_classes;
 
 public abstract class Machine {
 

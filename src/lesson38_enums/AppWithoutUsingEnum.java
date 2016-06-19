@@ -60,6 +60,6 @@ public class AppWithoutUsingEnum {
     //So let's say I want to use the 'animal' in a different class - it is a faff for me to then find out what the
     //constant values are (cat, dog, mouse). Even worse, I might not even know that these constants exist...
 
-    //So let's now go to the AppWithEnum.java to find out more about how we can resolve these problems by using lesson38_enums.
+    //So let's now go to the AppWithEnum.java to find out more about how we can resolve these problems by using enums.
 
 }

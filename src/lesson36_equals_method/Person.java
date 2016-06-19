@@ -157,7 +157,6 @@ class App {
         String text2 = "hello";
 
         //In the case of the Strings and references above, because the values of the String objects are the same (i.e.
-        //"hello"), Java has cleverly optimised and actually pointed text1 and text2 to the same String object...
         //(FYI - Note that the above is basically a shortcut for String text1 = new String("hello")).
 
         //So, when I compare the references text1 and text2 by using ==, while I would expect the answer to be false,

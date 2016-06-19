@@ -29,7 +29,7 @@ public abstract class Machine {
         this.id = id;
     }
 
-    //5) So I've now addded abstract into the method signature and am now going to add some abstract methods.
+    //5) So I've now added abstract into the method signature and am now going to add some abstract methods.
 
     //Abstract classes can have abstract methods
 

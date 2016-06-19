@@ -41,7 +41,7 @@ public class AppUsingEnum {
 
         //Enums are considered 'type-safe' because they restrict values that can be used
 
-        //And that's about 90% of what you do with lesson38_enums...pretty straightforward.
+        //And that's about 90% of what you do with enums...pretty straightforward.
 
         //But let's now go back to the Animal.java (enum) class and look at some other things you can do with Enums.
 

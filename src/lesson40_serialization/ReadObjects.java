@@ -1,4 +1,4 @@
-package serialization;
+package lesson40_serialization;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

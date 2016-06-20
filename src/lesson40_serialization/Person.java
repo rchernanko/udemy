@@ -24,7 +24,7 @@ they are simply being split in this instance for demonstrative purposes).
  */
 
 
-package serialization;
+package lesson40_serialization;
 
 //1)
 

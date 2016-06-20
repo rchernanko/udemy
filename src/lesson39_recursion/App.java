@@ -21,8 +21,8 @@ public class App {
     }
 
     //With the above, it's important to realise that whatever I do with 'initialNumber' within the calculate
-    //method (i.e. within its { and }), this will have no impact on the variable 'value' declared in the main method
-    //(i.e. the value in the variable 'value' will not change - to be honest, the "void" is a giveaway there!).
+    //method (i.e. within its { and }), this will have no impact on the variable 'number' declared in the main method
+    //(i.e. the value in the variable 'number' will not change - to be honest, the "void" is a giveaway there!).
 
     //The video tutorial simply uses 1 calculate method, but I will create another one (calculateAgain), as I want the
     //illustrated points above to make sense!

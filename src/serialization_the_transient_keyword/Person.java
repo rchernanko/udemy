@@ -3,7 +3,7 @@
 The transient keyword is one which is used when you serialize objects.
 
 FYI - Prior to writing any comments in the three classes within this package, I've created a basic Person object (as
-per its structure within the 'serialization' package, and have written some code within WriteObjects and ReadObjects.
+per its structure within the 'lesson40_serialization' package, and have written some code within WriteObjects and ReadObjects.
 
  */
 

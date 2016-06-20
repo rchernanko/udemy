@@ -4,7 +4,7 @@ This tutorial looks at how to sort lists using Comparators.
 
  */
 
-package collections_framework_sorting_lists;
+package lesson48_collections_framework_sorting_lists;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -10,7 +10,7 @@ In this tutorial, we will be looking at maps that DO maintain order.
 
  */
 
-package collections_framework_sortedmaps;
+package lesson45_collections_framework_sortedmaps;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

@@ -7,7 +7,7 @@ After lists, maps are probably the next most useful of the Java collection class
 
  */
 
-package collections_framework_hashmaps;
+package lesson44_collections_framework_hashmaps;
 
 import java.util.HashMap;
 import java.util.Map;

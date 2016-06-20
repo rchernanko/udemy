@@ -7,7 +7,7 @@ per its structure within the 'lesson40_serialization' package, and have written 
 
  */
 
-package serialization_the_transient_keyword;
+package lesson41_serialization_the_transient_keyword;
 
 import java.io.Serializable;
 

@@ -4,7 +4,7 @@ In this tutorial, we will look at how to use your own custom-made objects in set
 
  */
 
-package collections_framework_adding_objects_to_maps_and_sets;
+package lesson47_collections_framework_adding_objects_to_maps_and_sets;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;

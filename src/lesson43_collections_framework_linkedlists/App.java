@@ -1,6 +1,6 @@
 /*
 
-Before I look at this class, I should read the class within collections_framework_arraylists
+Before I look at this class, I should read the class within lesson42_collections_framework_arraylists
 
 In this tutorial, we will be comparing LinkedLists with ArrayLists.
 
@@ -15,7 +15,7 @@ If you want to add items efficiently to somewhere in a list other than the begin
 
  */
 
-package collections_framework_linkedlists;
+package lesson43_collections_framework_linkedlists;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

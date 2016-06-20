@@ -1,4 +1,4 @@
-package serialization_the_transient_keyword;
+package lesson41_serialization_the_transient_keyword;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package collections_framework_sets;
+package lesson46_collections_framework_sets;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

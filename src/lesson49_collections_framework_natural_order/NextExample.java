@@ -11,7 +11,7 @@ So let's go straight to the compareTo method within PersonAgain class...
 
  */
 
-package collections_framework_natural_order;
+package lesson49_collections_framework_natural_order;
 
 import java.util.*;
 

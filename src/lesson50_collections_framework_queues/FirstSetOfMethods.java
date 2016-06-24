@@ -34,7 +34,7 @@ with e.g. trying to add an element to a queue which is already full etc - let's 
 
  */
 
-package collections_framework_queues;
+package lesson50_collections_framework_queues;
 
 import java.util.NoSuchElementException;
 import java.util.Queue;

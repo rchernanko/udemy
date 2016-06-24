@@ -1,4 +1,4 @@
-package collections_framework_queues;
+package lesson50_collections_framework_queues;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;

@@ -11,7 +11,7 @@ And we will also look at how you define the natural order for your own classes (
 
  */
 
-package collections_framework_natural_order;
+package lesson49_collections_framework_natural_order;
 
 import java.util.*;
 

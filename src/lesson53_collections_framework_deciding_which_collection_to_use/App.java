@@ -7,7 +7,7 @@ deciding upon one collection or another.
  */
 
 
-package collections_framework_deciding_which_collection_to_use;
+package lesson53_collections_framework_deciding_which_collection_to_use;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +25,6 @@ public class App {
 
     public static void main(String[] args) {
 
-        //
         // Consider:
         // 1. what you need the collection to do
         // 2. are you using the fastest collection for your purposes

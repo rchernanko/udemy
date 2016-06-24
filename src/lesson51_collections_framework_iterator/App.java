@@ -5,7 +5,7 @@ We'll look at using them in this tutorial, then next time we'll move on to imple
 
  */
 
-package collections_framework_iterator;
+package lesson51_collections_framework_iterator;
 
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -7,7 +7,7 @@ This tutorial will explore how to define the natural order for your own custom o
 
  */
 
-package collections_framework_natural_order;
+package lesson49_collections_framework_natural_order;
 
 //1) First thing's first, let's create my own custom object - 1 variable, 1 constructor and a toString method (Person)
 //See below - ignore everything else for now:

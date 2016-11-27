@@ -1,3 +1,30 @@
+/*
+
+Interfaces:
+
+e.g. i have 2 classes, Person and Machine.
+
+They are not similar at all, but they both want a method to showInfo();
+
+We could create an interface called Info, with a showInfo() method.
+
+Person and Machine will then implement the Info interface
+
+
+Analogy for interfaces:
+
+-If you open a bank account, it's like doing a "new" on a class.
+e.g. new Person();
+
+- When you open a bank account, before you do so, you do a lot of research on things like interest rates, opening hours
+etc. AND this makes you decide to go with one bank. i.e. this makes you decide to use the Person() object.
+
+- Once you've opened it, you expect that the bank would have the same facilities as other banks e.g. paying money in,
+taking money out etc. This is shared behaviour for all banks - and therefore these shared features could be stored
+in an interface which the other classes then implements.
+
+ */
+
 package lesson16_interfaces;
 
 public class App {
